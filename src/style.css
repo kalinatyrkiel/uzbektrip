@@ -485,6 +485,81 @@ a {
   background: rgba(232, 201, 176, 0.55);
 }
 
+/* Regional sample flights */
+.flights--regional {
+  padding-top: 2.25rem;
+}
+
+.regional__lede {
+  margin: -0.35rem 0 1.25rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--burgundy-ink);
+  opacity: 0.92;
+  max-width: 34rem;
+}
+
+.flight-card--sample {
+  padding-top: 1.55rem;
+}
+
+.sample-airline {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.15rem 0 0.85rem;
+}
+
+.sample-airline__name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--burgundy-ink);
+  opacity: 0.85;
+}
+
+.airline-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 2px solid var(--burgundy);
+  flex-shrink: 0;
+}
+
+.airline-mark--silkavia {
+  background: #e07a2f;
+  color: var(--cream);
+}
+
+.airline-mark--qanot {
+  background: #1e3a5f;
+  color: var(--teal);
+}
+
+.mid__note--direct {
+  color: var(--teal-deep);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.plan__link {
+  display: inline;
+  margin-left: 0.15rem;
+  font-weight: 800;
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.plan__link:hover {
+  color: var(--burgundy-ink);
+}
+
 /* Plan */
 .plan__list {
   margin: 0;
