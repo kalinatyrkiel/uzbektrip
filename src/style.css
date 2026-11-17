@@ -434,9 +434,17 @@ a {
 
 .easter__copy {
   margin: 0 0 1.15rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--burgundy-ink);
+}
+
+.easter__copy li {
+  margin: 0;
 }
 
 .flight-card--easter {
@@ -515,33 +523,6 @@ a {
   margin: 0;
   font-weight: 600;
   font-size: 0.98rem;
-}
-
-/* Excuses */
-.excuses__list {
-  margin: 0 0 1.5rem;
-  display: grid;
-  gap: 0.85rem;
-}
-
-.excuses__list dt {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--burgundy);
-}
-
-.excuses__list dd {
-  margin: 0.25rem 0 0;
-  padding: 0.75rem 0.9rem;
-  background: rgba(243, 230, 210, 0.28);
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-.excuses__cta {
-  width: 100%;
-  max-width: 18rem;
 }
 
 /* Footer */
