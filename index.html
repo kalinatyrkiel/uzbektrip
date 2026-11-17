@@ -31,9 +31,6 @@
             LOT WAW ↔ TAS,
             <time class="hero__date" datetime="2027-03-19">19–29.03.2027</time>
           </p>
-          <div class="hero__ctas reveal delay-3">
-            <a class="btn btn--primary" href="#loty">Pakuj się</a>
-          </div>
         </div>
         <div class="hero__frieze" aria-hidden="true"></div>
       </header>
@@ -43,21 +40,54 @@
           <p class="eyebrow">Dlaczego jedziemy</p>
           <h2>Bo życie jest krótkie, a plov nie zje się sam.</h2>
           <ul class="why__list">
-            <li>
+            <li
+              class="why__item why__item--photo"
+              data-lightbox="samarkanda"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-samarkanda"
+              aria-label="Pokaż zdjęcie Samarkandy"
+            >
               <strong>Registan, meczety, kafelki</strong>
               Samarkanda to nie tylko knajpa w Warszawie
             </li>
-            <li>
+            <li
+              class="why__item why__item--photo"
+              data-lightbox="metro"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-metro"
+              aria-label="Pokaż zdjęcie metra w Taszkencie"
+            >
               <strong>Metro w Taszkencie</strong>
               Siema, brutalistyczne świry
             </li>
-            <li>
-              <strong>Ałmaty i góry</strong> — Kok-Tobe, Shymbulak, jedzenie,
-              które pamięta się dłużej niż urlop.
+            <li
+              class="why__item why__item--photo"
+              data-lightbox="almaty"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-almaty"
+              aria-label="Pokaż zdjęcie Ałmatów"
+            >
+              <strong>Ałmaty i góry</strong>
+              Spektakularne miasto u stóp gór – dla każdego coś miłego
             </li>
-            <li>
-              <strong>LOT w obie strony</strong> — jeden bilet, zero kombinowania
-              z trzema liniami.
+            <li
+              class="why__item why__item--photo"
+              data-lightbox="navruz"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-navruz"
+              aria-label="Pokaż zdjęcie Navruz"
+            >
+              <strong>Uzbecki nowy rok</strong>
+              Navruz w Taszkencie: wyjątkowe jedzenie, celebracja, jak
+              Wielkanoc, ale lepiej.
             </li>
           </ul>
         </section>
@@ -312,22 +342,56 @@
                 powrotem do Taszkentu. Bo rano lot do Kazachstanu.
               </p>
             </li>
-            <li class="plan__item plan__item--kz">
+            <li
+              class="plan__item plan__item--kz plan__item--photo"
+              data-lightbox="almaty"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-almaty"
+              aria-label="Pokaż zdjęcie Ałmatów"
+            >
               <span class="plan__day">D4 · 23.03 · TAS → Ałmaty</span>
               <p>Poranny lot regionalny. Hello, Ałmaty!</p>
             </li>
-            <li class="plan__item plan__item--kz">
+            <li
+              class="plan__item plan__item--kz plan__item--photo"
+              data-lightbox="almaty"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-almaty"
+              aria-label="Pokaż zdjęcie Ałmatów"
+            >
               <span class="plan__day">D5 · 24.03 · Ałmaty</span>
-              <p>Góry dla chętnych, pełen dzień w Ałmatach.</p>
+              <p>
+                Spektakularne miasto u stóp gór – dla każdego coś miłego.
+              </p>
             </li>
-            <li class="plan__item plan__item--kz">
+            <li
+              class="plan__item plan__item--kz plan__item--photo"
+              data-lightbox="almaty"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-almaty"
+              aria-label="Pokaż zdjęcie Ałmatów"
+            >
               <span class="plan__day">D6 · 25.03 · Ałmaty → TAS</span>
               <p>
                 Ostatni dzień w Kazachstanie, lot powrotny do Taszkentu
                 wieczorem lub popołudniem.
               </p>
             </li>
-            <li class="plan__item plan__item--uz">
+            <li
+              class="plan__item plan__item--uz plan__item--photo"
+              data-lightbox="metro"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-metro"
+              aria-label="Pokaż zdjęcie metra w Taszkencie"
+            >
               <span class="plan__day">D7–D9 · 26–28.03 · Taszkent chill</span>
               <p>
                 Kto wraca na święta, wraca na święta. Reszta: metro, socrealizm,
@@ -380,10 +444,116 @@
         </button>
         <img
           class="lightbox__img"
-          src="/samarkanda.jpg"
+          src="/samarkanda.png"
           alt="Samarkanda — błękitne mozaiki i kopuły na placu Registan"
           width="375"
           height="500"
+        />
+      </div>
+    </div>
+
+    <div
+      class="lightbox"
+      id="lightbox-metro"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-metro-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        data-lightbox-close
+        aria-label="Zamknij zdjęcie"
+      ></button>
+      <div class="lightbox__panel" role="document">
+        <h2 class="lightbox__title" id="lightbox-metro-title">
+          Metro w Taszkencie
+        </h2>
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <img
+          class="lightbox__img"
+          src="/metro-tashkent.png"
+          alt="Metro w Taszkencie — stacja z dekoracyjnymi kolumnami i oświetleniem"
+          width="739"
+          height="415"
+        />
+      </div>
+    </div>
+
+    <div
+      class="lightbox"
+      id="lightbox-almaty"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-almaty-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        data-lightbox-close
+        aria-label="Zamknij zdjęcie"
+      ></button>
+      <div class="lightbox__panel" role="document">
+        <h2 class="lightbox__title" id="lightbox-almaty-title">Ałmaty</h2>
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <img
+          class="lightbox__img"
+          src="/almaty-mountains.png"
+          alt="Ałmaty — miasto u stóp gór Tian Shan"
+          width="678"
+          height="452"
+        />
+      </div>
+    </div>
+
+    <div
+      class="lightbox"
+      id="lightbox-navruz"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-navruz-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        data-lightbox-close
+        aria-label="Zamknij zdjęcie"
+      ></button>
+      <div class="lightbox__panel" role="document">
+        <h2 class="lightbox__title" id="lightbox-navruz-title">
+          Uzbecki nowy rok
+        </h2>
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <img
+          class="lightbox__img"
+          src="/navruz.png"
+          alt="Navruz w Taszkencie — stoły z jedzeniem i celebracja"
+          width="555"
+          height="360"
         />
       </div>
     </div>

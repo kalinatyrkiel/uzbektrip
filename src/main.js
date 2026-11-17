@@ -59,7 +59,14 @@ function openLightbox(id, trigger) {
   document.body.classList.add('lightbox-open')
 
   const closeBtn = dialog.querySelector('.lightbox__close')
-  ;(closeBtn || dialog).focus()
+  const focusTarget = closeBtn || dialog
+  if (typeof focusTarget.focus === 'function') {
+    try {
+      focusTarget.focus({ preventScroll: true })
+    } catch {
+      focusTarget.focus()
+    }
+  }
 }
 
 function closeLightbox(dialog) {

@@ -162,12 +162,6 @@ a {
   box-shadow: 2px 2px 0 rgba(58, 26, 29, 0.35);
 }
 
-.hero__ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
 .hero__frieze {
   position: absolute;
   left: 0;
@@ -180,49 +174,6 @@ a {
   background-size: 540px auto;
   border-top: 2px solid var(--burgundy);
   image-rendering: pixelated;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3rem;
-  padding: 0.7rem 1.2rem;
-  border: 2.5px solid var(--burgundy);
-  border-radius: 12px;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 800;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    transform 0.18s ease,
-    background 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn:active {
-  transform: translateY(0);
-}
-
-.btn--primary {
-  background: var(--teal);
-  color: var(--burgundy-ink);
-  box-shadow: 0 4px 0 rgba(74, 34, 38, 0.45);
-}
-
-.btn--primary:hover {
-  background: #6ebaba;
-}
-
-.btn--ghost {
-  background: rgba(58, 26, 29, 0.45);
-  color: var(--cream);
-  backdrop-filter: blur(4px);
 }
 
 /* ——— Sections ——— */
@@ -298,6 +249,17 @@ a {
   margin-bottom: 0.25rem;
   font-weight: 800;
   font-size: 1.05rem;
+}
+
+.why__item--photo {
+  position: relative;
+  padding-right: 2.6rem;
+  cursor: pointer;
+}
+
+.why__item--photo:focus-visible {
+  outline: 3px solid var(--teal-deep);
+  outline-offset: 3px;
 }
 
 /* Flights */
@@ -805,6 +767,7 @@ a {
 }
 
 .plan__item--photo {
+  padding-right: 2.75rem;
   cursor: pointer;
 }
 
@@ -813,19 +776,21 @@ a {
   outline-offset: 3px;
 }
 
+.why__item--photo::after,
 .plan__item--photo::after {
-  content: "zdjęcie";
-  display: inline-block;
-  margin-top: 0.55rem;
-  padding: 0.18rem 0.5rem;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--teal-ink);
-  background: rgba(126, 200, 200, 0.45);
-  border: 1.5px solid var(--teal-ink);
-  border-radius: 8px;
+  content: "";
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  background-color: var(--teal-ink);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='12' r='3' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='12' r='3' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  pointer-events: none;
+  opacity: 0.85;
 }
 
 /* Lightbox */
