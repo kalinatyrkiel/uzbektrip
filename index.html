@@ -232,15 +232,13 @@
         </section>
 
         <section class="section faq" id="faq">
-          <p class="eyebrow">FAQ · bo ktoś zapyta</p>
-          <h2>Pytania, zanim kupisz bilety.</h2>
+          <h2>FAQ</h2>
 
           <details class="faq__item" open>
             <summary>Jakie to koszty za całość?</summary>
             <div class="faq__body">
               <p class="faq__answer">
-                Na osobę: <strong>ok. 4400–5600 zł</strong> (orientacyjnie,
-                mid-range, bez jedzenia „na bogato”).
+                Na osobę: <strong>ok. 4400–5600 zł</strong>
               </p>
               <ul class="faq__breakdown">
                 <li>
@@ -260,32 +258,18 @@
                   <strong>~200–450 zł</strong>
                 </li>
               </ul>
-              <p class="faq__note">
-                To szacunek, nie faktura. Założenia: hotele mid-range (pokój na
-                2 / ½ na osobę), ~6 nocy TAS + 1 Samarkanda + 2 Ałmaty; LOT i
-                ~800 zł regionalnych jak na stronie; lokalnie Afrosiyob +
-                metro/taxi. Jedzenie, atrakcje i shopping osobno.
-              </p>
             </div>
           </details>
 
           <details class="faq__item">
             <summary>Ile to dni urlopu?</summary>
             <div class="faq__body">
-              <p class="faq__answer">
-                <strong>6 dni urlopu</strong> — i koniec matematyki.
-              </p>
+              <p class="faq__answer">Około 6 dni urlopu za 10 dni wyjazdu.</p>
               <p>
                 Wylot <time datetime="2027-03-19">19.03.2027</time> (pt),
                 powrót <time datetime="2027-03-29">29.03.2027</time> (pon).
-                Weekendy wolne. Wielkanoc 2027: niedziela 28.03, a
-                <strong>poniedziałek 29.03 to Święto</strong> (drugi dzień
-                Wielkanocy) — urlopu na ten dzień nie bierzesz.
               </p>
-              <p>
-                Do wzięcia: 19, 22, 23, 24, 25 i 26 marca. Reszta to weekend albo
-                święto. Plov &gt; biuro.
-              </p>
+              <p>Do wzięcia: 19, 22, 23, 24, 25 i 26 marca.</p>
             </div>
           </details>
         </section>
@@ -298,14 +282,30 @@
               <span class="plan__day">D1 · 19/20.03 · Taszkent</span>
               <p>LOT ląduje ~01:55. Szybka drzemka i lecimy!</p>
             </li>
-            <li class="plan__item plan__item--uz">
+            <li
+              class="plan__item plan__item--uz plan__item--photo"
+              data-lightbox="samarkanda"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-samarkanda"
+              aria-label="Pokaż zdjęcie Samarkandy"
+            >
               <span class="plan__day">D2 · 21.03 · Samarkanda</span>
               <p>
                 Szybki pociąg Afrosiyob, 2h i jesteśmy. Błękitne mozaiki, czas
                 start!
               </p>
             </li>
-            <li class="plan__item plan__item--uz">
+            <li
+              class="plan__item plan__item--uz plan__item--photo"
+              data-lightbox="samarkanda"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="lightbox-samarkanda"
+              aria-label="Pokaż zdjęcie Samarkandy"
+            >
               <span class="plan__day">D3 · 22.03 · Samarkanda</span>
               <p>
                 Meczety, zwiedzanie, smaki i zapachy. Wieczorem pociąg z
@@ -351,6 +351,43 @@
         <a href="#top">Wróć na górę</a>
       </footer>
     </div>
+
+    <div
+      class="lightbox"
+      id="lightbox-samarkanda"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-samarkanda-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        data-lightbox-close
+        aria-label="Zamknij zdjęcie"
+      ></button>
+      <div class="lightbox__panel" role="document">
+        <h2 class="lightbox__title" id="lightbox-samarkanda-title">
+          Samarkanda
+        </h2>
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <img
+          class="lightbox__img"
+          src="/samarkanda.jpg"
+          alt="Samarkanda — błękitne mozaiki i kopuły na placu Registan"
+          width="375"
+          height="500"
+        />
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -804,6 +804,114 @@ a {
   color: var(--burgundy-ink);
 }
 
+.plan__item--photo {
+  cursor: pointer;
+}
+
+.plan__item--photo:focus-visible {
+  outline: 3px solid var(--teal-deep);
+  outline-offset: 3px;
+}
+
+.plan__item--photo::after {
+  content: "zdjęcie";
+  display: inline-block;
+  margin-top: 0.55rem;
+  padding: 0.18rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  background: rgba(126, 200, 200, 0.45);
+  border: 1.5px solid var(--teal-ink);
+  border-radius: 8px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(31, 18, 20, 0.78);
+  cursor: pointer;
+}
+
+.lightbox__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 42rem);
+  max-height: min(92svh, 100%);
+  padding: 1rem 1rem 1.1rem;
+  overflow: auto;
+  background: var(--cream);
+  border: 2.5px solid var(--burgundy);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+
+.lightbox__title {
+  margin: 0 2.5rem 0.75rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--burgundy-ink);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 2px solid var(--burgundy);
+  border-radius: 10px;
+  background: var(--teal);
+  color: var(--burgundy-ink);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__close:hover {
+  background: #6ebaba;
+}
+
+.lightbox__close:focus-visible {
+  outline: 3px solid var(--teal-deep);
+  outline-offset: 2px;
+}
+
+.lightbox__img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid var(--burgundy);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
 /* Footer */
 .footer {
   margin-top: 2.5rem;

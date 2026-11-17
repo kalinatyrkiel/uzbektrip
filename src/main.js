@@ -35,3 +35,88 @@ style.textContent = `
   }
 `
 document.head.appendChild(style)
+
+const lightboxes = new Map(
+  [...document.querySelectorAll('.lightbox')].map((el) => [el.id, el]),
+)
+
+let lastTrigger = null
+
+function getFocusable(root) {
+  return [
+    ...root.querySelectorAll(
+      'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    ),
+  ].filter((el) => !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true')
+}
+
+function openLightbox(id, trigger) {
+  const dialog = lightboxes.get(id)
+  if (!dialog || !dialog.hidden) return
+
+  lastTrigger = trigger || document.activeElement
+  dialog.hidden = false
+  document.body.classList.add('lightbox-open')
+
+  const closeBtn = dialog.querySelector('.lightbox__close')
+  ;(closeBtn || dialog).focus()
+}
+
+function closeLightbox(dialog) {
+  if (!dialog || dialog.hidden) return
+  dialog.hidden = true
+  document.body.classList.remove('lightbox-open')
+  if (lastTrigger && typeof lastTrigger.focus === 'function') {
+    lastTrigger.focus()
+  }
+  lastTrigger = null
+}
+
+document.querySelectorAll('[data-lightbox]').forEach((trigger) => {
+  const id = `lightbox-${trigger.dataset.lightbox}`
+
+  trigger.addEventListener('click', () => openLightbox(id, trigger))
+  trigger.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      openLightbox(id, trigger)
+    }
+  })
+})
+
+document.querySelectorAll('[data-lightbox-close]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    closeLightbox(btn.closest('.lightbox'))
+  })
+})
+
+document.addEventListener('keydown', (event) => {
+  const open = [...lightboxes.values()].find((el) => !el.hidden)
+  if (!open) return
+
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    closeLightbox(open)
+    return
+  }
+
+  if (event.key !== 'Tab') return
+
+  const focusable = getFocusable(open)
+  if (focusable.length === 0) {
+    event.preventDefault()
+    return
+  }
+
+  const first = focusable[0]
+  const last = focusable[focusable.length - 1]
+  const active = document.activeElement
+
+  if (event.shiftKey && active === first) {
+    event.preventDefault()
+    last.focus()
+  } else if (!event.shiftKey && active === last) {
+    event.preventDefault()
+    first.focus()
+  }
+})
