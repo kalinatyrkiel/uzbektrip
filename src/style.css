@@ -1119,8 +1119,10 @@ a {
 }
 
 .variant-toggle__label {
+  font-family: var(--font-heading);
+  font-optical-sizing: auto;
   font-size: clamp(0.78rem, 3.2vw, 0.92rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   overflow-wrap: anywhere;
 }
