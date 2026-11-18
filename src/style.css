@@ -1145,34 +1145,6 @@ a {
   overflow-wrap: anywhere;
 }
 
-.plan__variant-tag {
-  display: inline-block;
-  margin: 0 0 0.65rem;
-  padding: 0.28rem 0.65rem;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--burgundy-ink);
-  background: rgba(126, 200, 200, 0.45);
-  border: 1.5px solid var(--teal-ink);
-  border-radius: 999px;
-}
-
-.plan__variant-tag--stack {
-  display: inline-block;
-  line-height: 1.35;
-  border-radius: 14px;
-  max-width: 100%;
-  text-wrap: pretty;
-}
-
-#plan-variant-b .plan__variant-tag {
-  background: rgba(201, 212, 164, 0.7);
-  border-color: var(--moss-deep);
-  color: var(--moss-ink);
-}
-
 /* Plan */
 .plan__list {
   margin: 0;
