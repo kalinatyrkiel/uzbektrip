@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalina Travel Prezentuje — Uzbekistan + Kazachstan</title>
+    <title>
+      Kalina Travel Prezentuje — Uzbekistan + Kazachstan (Kirgistan)
+    </title>
     <meta
       name="description"
-      content="10 dni: Taszkent → Samarkanda → Ałmaty. LOT WAW ↔ TAS, 19–29.03.2027."
+      content="Uzbekistan + Kazachstan (Kirgistan opcjonalnie). LOT WAW ↔ TAS, marzec 2027."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,13 +25,16 @@
         <div class="hero__veil" aria-hidden="true"></div>
         <div class="hero__content">
           <p class="brand reveal">Kalina Travel Prezentuje</p>
-          <h1 class="hero__title reveal delay-1">Uzbekistan + Kazachstan</h1>
+          <h1 class="hero__title reveal delay-1">
+            Uzbekistan + Kazachstan
+            <span class="hero__option">(Kirgistan)</span>
+          </h1>
           <p class="hero__route reveal delay-2">
-            10 dni: Taszkent → Samarkanda → Ałmaty → Taszkent
+            Wariant A: 10 dni · Wariant B UKK: 12 dni z Biszkekiem
           </p>
           <p class="hero__flights reveal delay-2">
             LOT WAW ↔ TAS,
-            <time class="hero__date" datetime="2027-03-19">19–29.03.2027</time>
+            <time class="hero__date" datetime="2027-03-19">marzec 2027</time>
           </p>
         </div>
         <div class="hero__frieze" aria-hidden="true"></div>
@@ -91,6 +96,46 @@
             </li>
           </ul>
         </section>
+
+        <div class="section variant-bar" id="wariant">
+          <p class="eyebrow">Wariant wyjazdu</p>
+          <h2 class="variant-bar__title">A albo B — flipnij, zobacz różnicę.</h2>
+          <div
+            class="variant-toggle"
+            role="tablist"
+            aria-label="Wariant planu wyjazdu"
+          >
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-variant-a"
+              aria-selected="true"
+              aria-controls="plan-variant-a"
+              data-variant="a"
+            >
+              <span class="variant-toggle__code">A</span>
+              <span class="variant-toggle__label"
+                >Uzbekistan + Kazachstan</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-variant-b"
+              aria-selected="false"
+              aria-controls="plan-variant-b"
+              data-variant="b"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">B</span>
+              <span class="variant-toggle__label"
+                >UKK: UZ – KZ – KG</span
+              >
+            </button>
+          </div>
+        </div>
 
         <section class="section flights" id="loty">
           <p class="eyebrow">Loty · LOT</p>
@@ -201,12 +246,6 @@
                   ><time datetime="2027-03-30">wt 30.03</time></span
                 >
               </article>
-              <article class="return-chip return-chip--unavailable">
-                <span class="return-chip__price">brak</span>
-                <span class="return-chip__date"
-                  ><time datetime="2027-03-31">śr 31.03</time></span
-                >
-              </article>
               <article class="return-chip return-chip--pick">
                 <span class="return-chip__price">od 1217,09 PLN</span>
                 <span class="return-chip__date"
@@ -214,15 +253,6 @@
                 >
               </article>
             </div>
-            <aside class="leave-tip" aria-label="Tip urlopowy na 30.03">
-              <p class="eyebrow">Tip urlopowy · 30.03</p>
-              <h3>Wariant „jestem uparta, urlopu nie biorę”</h3>
-              <ul class="easter__copy">
-                <li>TAS → WAW ~2:00 w nocy</li>
-                <li>Wylatujesz we wtorek o drugiej, a w pracy Cię nie było</li>
-                <li>Dla upartych: da się wrócić bez dnia wolnego</li>
-              </ul>
-            </aside>
           </div>
         </section>
 
@@ -407,85 +437,126 @@
         <section class="section faq" id="faq">
           <h2>FAQ</h2>
 
-          <details class="faq__item" open>
-            <summary>Jakie to koszty za całość?</summary>
-            <div class="faq__body">
-              <p class="faq__answer">
-                Na osobę: <strong>ok. 4400–5600 zł</strong>
-              </p>
-              <ul class="faq__breakdown">
-                <li>
-                  <span>LOT WAW ↔ TAS</span>
-                  <strong>2528,84 PLN</strong>
-                </li>
-                <li>
-                  <span>Loty regionalne TAS ↔ ALA</span>
-                  <strong>~800 zł</strong>
-                </li>
-                <li>
-                  <span>Hotele (~9 nocy)</span>
-                  <strong>~900–1600 zł</strong>
-                </li>
-                <li>
-                  <span>Lokalnie (pociąg, metro, taxi)</span>
-                  <strong>~200–450 zł</strong>
-                </li>
-              </ul>
-            </div>
-          </details>
+          <div data-variant-panel="a">
+            <p class="plan__variant-tag">Wariant A — koszty i urlop</p>
 
-          <details class="faq__item">
-            <summary>Ile to dni urlopu?</summary>
-            <div class="faq__body">
-              <p class="faq__answer">Około 6 dni urlopu za 10 dni wyjazdu.</p>
-              <p>
-                Wylot <time datetime="2027-03-19">19.03.2027</time> (pt),
-                powrót <time datetime="2027-03-29">29.03.2027</time> (pon).
-              </p>
-              <p>Do wzięcia: 19, 22, 23, 24, 25 i 26 marca.</p>
-            </div>
-          </details>
+            <details class="faq__item" open>
+              <summary>Jakie to koszty za całość?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">
+                  Na osobę: <strong>ok. 4400–5600 zł</strong>
+                </p>
+                <ul class="faq__breakdown">
+                  <li>
+                    <span>LOT WAW ↔ TAS</span>
+                    <strong>2528,84 PLN</strong>
+                  </li>
+                  <li>
+                    <span>Loty regionalne TAS ↔ ALA</span>
+                    <strong>~800 zł</strong>
+                  </li>
+                  <li>
+                    <span>Hotele (~9 nocy)</span>
+                    <strong>~900–1600 zł</strong>
+                  </li>
+                  <li>
+                    <span>Lokalnie (pociąg, metro, taxi)</span>
+                    <strong>~200–450 zł</strong>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Ile to dni urlopu?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">Około 6 dni urlopu za 10 dni wyjazdu.</p>
+                <p>
+                  Wylot <time datetime="2027-03-19">19.03.2027</time> (pt),
+                  powrót <time datetime="2027-03-29">29.03.2027</time> (pon).
+                </p>
+                <p>Do wzięcia: 19, 22, 23, 24, 25 i 26 marca.</p>
+              </div>
+            </details>
+          </div>
+
+          <div data-variant-panel="b" hidden>
+            <p class="plan__variant-tag">Wariant B — UKK · koszty i urlop</p>
+
+            <details class="faq__item" open>
+              <summary>Jakie to koszty za całość?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">
+                  Dokładnej sumy UKK jeszcze nie domykamy — licz od wariantu A.
+                </p>
+                <p class="faq__note">
+                  Baza jak w A: <strong>~4400–5600 zł</strong>. Do tego dorzucasz
+                  dłuższy wyjazd (~2 noce więcej), hop regionalny ALA–BSZ–TAS od
+                  <strong>~713 zł</strong> i późniejszy powrót LOT (30.03 od
+                  ~1060 zł albo 01.04 od ~1217 zł zamiast 29.03).
+                </p>
+                <ul class="faq__breakdown">
+                  <li>
+                    <span>LOT WAW → TAS (wylot)</span>
+                    <strong>wspólny z A</strong>
+                  </li>
+                  <li>
+                    <span>Powrót TAS → WAW</span>
+                    <strong>od ~1060 / ~1217 zł</strong>
+                  </li>
+                  <li>
+                    <span>Regionalne ALA → BSZ → TAS</span>
+                    <strong>od ~713 zł</strong>
+                  </li>
+                  <li>
+                    <span>TAS → ALA + hotele + lokalnie</span>
+                    <strong>jak A, plus ekstra noce</strong>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="faq__item" open>
+              <summary>Czy na 30.03 muszę brać urlop?</summary>
+              <div class="faq__body">
+                <aside class="leave-tip leave-tip--faq" aria-label="Tip urlopowy na 30.03">
+                  <p class="eyebrow">Tip urlopowy · 30.03</p>
+                  <h3>Wariant „jestem uparta, urlopu nie biorę”</h3>
+                  <ul class="easter__copy">
+                    <li>TAS → WAW ~2:00 w nocy</li>
+                    <li>
+                      Wylatujesz we wtorek o drugiej, a w pracy Cię nie było
+                    </li>
+                    <li>Dla upartych: da się wrócić bez dnia wolnego</li>
+                  </ul>
+                </aside>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary>Ile to dni urlopu?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">
+                  12 dni na mapie — urlop zależy od tego, którym LOT-em wracasz.
+                </p>
+                <p>
+                  Wylot jak w A:
+                  <time datetime="2027-03-19">19.03.2027</time> (pt). Powrót:
+                  <time datetime="2027-03-30">30.03</time> w nocy albo
+                  <time datetime="2027-04-01">01.04</time>.
+                </p>
+                <p>
+                  30.03 ~2:00 = tip z góry. 01.04 = licz dodatkowy dzień
+                  wolnego.
+                </p>
+              </div>
+            </details>
+          </div>
         </section>
 
         <section class="section plan" id="plan">
           <p class="eyebrow">Plan wyjazdu</p>
-          <h2>Wybierz wariant.</h2>
-
-          <div
-            class="variant-toggle"
-            role="tablist"
-            aria-label="Wariant planu wyjazdu"
-          >
-            <button
-              type="button"
-              class="variant-toggle__btn"
-              role="tab"
-              id="tab-variant-a"
-              aria-selected="true"
-              aria-controls="plan-variant-a"
-              data-variant="a"
-            >
-              <span class="variant-toggle__code">A</span>
-              <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan</span
-              >
-            </button>
-            <button
-              type="button"
-              class="variant-toggle__btn"
-              role="tab"
-              id="tab-variant-b"
-              aria-selected="false"
-              aria-controls="plan-variant-b"
-              data-variant="b"
-              tabindex="-1"
-            >
-              <span class="variant-toggle__code">B</span>
-              <span class="variant-toggle__label"
-                >UKK: UZ – KZ – KG</span
-              >
-            </button>
-          </div>
+          <h2>Dzień po dniu.</h2>
 
           <div
             class="plan__variant"
@@ -735,7 +806,7 @@
 
       <footer class="footer">
         <p class="brand brand--sm">Kalina Travel Prezentuje</p>
-        <p>Uzbekistan × Kazachstan · marzec 2027</p>
+        <p>Uzbekistan × Kazachstan (Kirgistan) · marzec 2027</p>
         <a href="#top">Wróć na górę</a>
       </footer>
     </div>

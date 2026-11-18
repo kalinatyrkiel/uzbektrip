@@ -133,6 +133,17 @@ a {
   text-wrap: balance;
 }
 
+.hero__option {
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--teal);
+  text-shadow: var(--text-shadow-cream);
+  vertical-align: middle;
+}
+
 .hero__route,
 .hero__flights {
   margin: 0;
@@ -618,9 +629,27 @@ a {
 
 .return-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
   margin: 0 0 1.15rem;
+}
+
+.variant-bar {
+  padding-bottom: 0.25rem;
+}
+
+.variant-bar__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 4.8vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--burgundy-ink);
+  text-wrap: balance;
+}
+
+.leave-tip--faq {
+  margin: 0.85rem 0 0;
 }
 
 .return-chip {
@@ -1197,10 +1226,6 @@ body.lightbox-open {
 
 @media (max-width: 420px) {
   .variant-toggle {
-    grid-template-columns: 1fr;
-  }
-
-  .return-strip {
     grid-template-columns: 1fr;
   }
 
