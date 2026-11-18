@@ -176,6 +176,11 @@ a {
   display: block;
 }
 
+.hero__route-b {
+  display: block;
+  margin-top: 0.35rem;
+}
+
 .hero__flights {
   margin-bottom: 1.5rem;
 }
