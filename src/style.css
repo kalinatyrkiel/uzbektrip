@@ -164,6 +164,14 @@ a {
   opacity: 0.75;
 }
 
+.flag {
+  display: inline-block;
+  margin-right: 0.12em;
+  font-size: 0.95em;
+  line-height: 1;
+  vertical-align: -0.05em;
+}
+
 .hero__flights {
   margin-bottom: 1.5rem;
 }
