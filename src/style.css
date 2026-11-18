@@ -648,6 +648,10 @@ a {
   text-wrap: balance;
 }
 
+.variant-bar__title--inline {
+  margin: 0.35rem 0 0.85rem;
+}
+
 .leave-tip--faq {
   margin: 0.85rem 0 0;
 }

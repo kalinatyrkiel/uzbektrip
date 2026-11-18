@@ -49,11 +49,16 @@ variantButtons.forEach((btn) => {
   btn.addEventListener('keydown', (event) => {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
     event.preventDefault()
-    const index = variantButtons.indexOf(btn)
+    const group = [
+      ...(btn.closest('[role="tablist"]')?.querySelectorAll('[data-variant]') ||
+        []),
+    ]
+    if (group.length === 0) return
+    const index = group.indexOf(btn)
     const next =
       event.key === 'ArrowRight'
-        ? variantButtons[(index + 1) % variantButtons.length]
-        : variantButtons[(index - 1 + variantButtons.length) % variantButtons.length]
+        ? group[(index + 1) % group.length]
+        : group[(index - 1 + group.length) % group.length]
     setVariant(next.dataset.variant)
     next.focus()
   })
