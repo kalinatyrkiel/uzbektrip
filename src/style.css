@@ -690,6 +690,14 @@ a {
   padding-bottom: 0.25rem;
 }
 
+.variant-bar--regional {
+  padding-bottom: 0;
+}
+
+.variant-bar--regional + .flights--regional {
+  padding-top: 0.35rem;
+}
+
 .variant-bar__title {
   margin: 0 0 1rem;
   font-size: clamp(1.35rem, 4.8vw, 1.85rem);

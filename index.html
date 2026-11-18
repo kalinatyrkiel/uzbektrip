@@ -410,12 +410,53 @@
           </div>
         </section>
 
+        <div class="section variant-bar variant-bar--regional" id="loty-regionalne">
+          <p class="eyebrow">Loty regionalne</p>
+          <div
+            class="variant-toggle"
+            role="tablist"
+            aria-label="Wariant lotów regionalnych"
+          >
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-regional-variant-a"
+              aria-selected="true"
+              aria-controls="loty-almaty"
+              data-variant="a"
+            >
+              <span class="variant-toggle__code">A</span>
+              <span class="variant-toggle__label"
+                >Uzbekistan + Kazachstan</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-regional-variant-b"
+              aria-selected="false"
+              aria-controls="loty-wariant-b"
+              data-variant="b"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">B</span>
+              <span class="variant-toggle__label"
+                >Uzbekistan + Kazachstan + Kirgistan</span
+              >
+            </button>
+          </div>
+        </div>
+
         <section
           class="section flights flights--regional"
           id="loty-almaty"
           data-variant-panel="a"
+          role="tabpanel"
+          aria-labelledby="tab-regional-variant-a"
         >
-          <p class="eyebrow">Lot regionalny · przykłady · wariant A</p>
+          <p class="eyebrow">Przykłady · wariant A</p>
           <h2>Lot regionalny</h2>
           <p class="regional__lede">
             Przykłady: TAS↔ALA 23.03 rano / 25.03 wieczór.
@@ -483,9 +524,11 @@
           class="section flights flights--regional"
           id="loty-wariant-b"
           data-variant-panel="b"
+          role="tabpanel"
+          aria-labelledby="tab-regional-variant-b"
           hidden
         >
-          <p class="eyebrow">Lot regionalny · przykłady · wariant B</p>
+          <p class="eyebrow">Przykłady · wariant B</p>
           <h2>Loty regionalne</h2>
           <p class="price-banner price-banner--regional">
             średnio <strong>600 zł</strong> za lot regionalny
