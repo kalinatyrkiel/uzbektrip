@@ -11,7 +11,9 @@ const observer = new IntersectionObserver(
 )
 
 document
-  .querySelectorAll('.section, .flight-card, .easter, .leave-tip, .return-chip')
+  .querySelectorAll(
+    '.section, .flight-card, .easter, .leave-tip, .return-chip, .carousel',
+  )
   .forEach((el) => {
     el.classList.add('scroll-fade')
     observer.observe(el)
@@ -175,4 +177,99 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault()
     first.focus()
   }
+})
+
+document.querySelectorAll('[data-carousel]').forEach((root) => {
+  const track = root.querySelector('[data-carousel-track]')
+  const slides = [...root.querySelectorAll('.carousel__slide')]
+  const dotsWrap = root.querySelector('[data-carousel-dots]')
+  const prevBtn = root.querySelector('[data-carousel-prev]')
+  const nextBtn = root.querySelector('[data-carousel-next]')
+  if (!track || slides.length === 0) return
+
+  let index = 0
+  let startX = 0
+  let deltaX = 0
+  let dragging = false
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button')
+    dot.type = 'button'
+    dot.className = 'carousel__dot'
+    dot.setAttribute('role', 'tab')
+    dot.setAttribute('aria-label', `Slajd ${i + 1}`)
+    dot.addEventListener('click', () => goTo(i))
+    dotsWrap?.appendChild(dot)
+  })
+
+  const dots = [...(dotsWrap?.querySelectorAll('.carousel__dot') || [])]
+
+  function goTo(next) {
+    index = (next + slides.length) % slides.length
+    track.style.transform = `translateX(-${index * 100}%)`
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index)
+    })
+    dots.forEach((dot, i) => {
+      dot.setAttribute('aria-selected', i === index ? 'true' : 'false')
+    })
+  }
+
+  prevBtn?.addEventListener('click', () => goTo(index - 1))
+  nextBtn?.addEventListener('click', () => goTo(index + 1))
+
+  track.addEventListener(
+    'pointerdown',
+    (event) => {
+      dragging = true
+      startX = event.clientX
+      deltaX = 0
+      track.setPointerCapture(event.pointerId)
+      track.classList.add('is-dragging')
+    },
+    { passive: true },
+  )
+
+  track.addEventListener(
+    'pointermove',
+    (event) => {
+      if (!dragging) return
+      deltaX = event.clientX - startX
+      const width = root.clientWidth || 1
+      const offset = (-index * 100) + (deltaX / width) * 100
+      track.style.transform = `translateX(${offset}%)`
+    },
+    { passive: true },
+  )
+
+  function endDrag(event) {
+    if (!dragging) return
+    dragging = false
+    track.classList.remove('is-dragging')
+    try {
+      track.releasePointerCapture(event.pointerId)
+    } catch {
+      /* already released */
+    }
+    const threshold = Math.min(64, (root.clientWidth || 240) * 0.18)
+    if (deltaX <= -threshold) goTo(index + 1)
+    else if (deltaX >= threshold) goTo(index - 1)
+    else goTo(index)
+    deltaX = 0
+  }
+
+  track.addEventListener('pointerup', endDrag)
+  track.addEventListener('pointercancel', endDrag)
+
+  root.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault()
+      goTo(index - 1)
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault()
+      goTo(index + 1)
+    }
+  })
+
+  goTo(0)
 })

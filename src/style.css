@@ -754,6 +754,140 @@ a {
   color: var(--burgundy-ink);
 }
 
+/* Photo carousel */
+.gallery {
+  max-width: 42rem;
+}
+
+.carousel {
+  margin: 0.35rem 0 0.5rem;
+  padding: 0.85rem 0.75rem 1rem;
+  background: rgba(243, 230, 210, 0.72);
+  border: 2.5px solid var(--burgundy);
+  border-radius: calc(var(--radius) + 2px);
+  box-shadow: var(--shadow);
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid var(--burgundy);
+  background:
+    linear-gradient(180deg, rgba(126, 200, 200, 0.18), transparent 42%),
+    var(--cream);
+  touch-action: pan-y;
+}
+
+.carousel__track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  cursor: grab;
+}
+
+.carousel__track.is-dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  min-height: clamp(16rem, 72vw, 28rem);
+  padding: 0.65rem;
+  box-sizing: border-box;
+}
+
+.carousel__slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: clamp(15rem, 68vw, 26rem);
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid var(--burgundy);
+  box-shadow: 0 6px 0 rgba(58, 26, 29, 0.12);
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.carousel__controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.carousel__btn {
+  width: 2.55rem;
+  height: 2.55rem;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--burgundy);
+  border-radius: 10px;
+  background: var(--teal);
+  color: var(--burgundy-ink);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(58, 26, 29, 0.28);
+}
+
+.carousel__btn:hover {
+  background: #6ebaba;
+}
+
+.carousel__btn:focus-visible {
+  outline: 3px solid var(--teal-deep);
+  outline-offset: 2px;
+}
+
+.carousel__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.carousel__dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  margin: 0;
+  padding: 0;
+  border: 1.5px solid var(--burgundy);
+  border-radius: 999px;
+  background: var(--cream);
+  cursor: pointer;
+}
+
+.carousel__dot[aria-selected="true"] {
+  background: var(--burgundy);
+}
+
+.carousel__hint {
+  margin: 0.65rem 0 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted-on-cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__track {
+    transition: none;
+  }
+}
+
 /* FAQ */
 .faq__item {
   margin: 0 0 0.9rem;
