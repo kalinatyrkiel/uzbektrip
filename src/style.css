@@ -18,8 +18,8 @@
   --muted-on-cream: #5a3034;
   --shadow: 0 10px 28px rgba(54, 28, 30, 0.18);
   --radius: 18px;
-  --font-display: "Syne", system-ui, sans-serif;
   --font-heading: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-display: var(--font-heading);
   --font-pixel: "Press Start 2P", ui-monospace, monospace;
   --text-shadow-cream: 0 1px 0 rgba(58, 26, 29, 0.45),
     0 0 12px rgba(58, 26, 29, 0.2);
@@ -39,6 +39,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-display);
+  font-optical-sizing: auto;
   color: var(--burgundy-ink);
   background: var(--olive);
   line-height: 1.45;
@@ -48,7 +49,28 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+.eyebrow,
+.tldr__row dt,
+.variant-bar__title,
+.variant-toggle__label,
+.variant-toggle__code,
+.plan__variant-tag,
+.plan__day,
+.flight-card__badge,
+.price-banner,
+.leg__code,
+.leg__time,
+.return-chip__price,
+.return-chip__date,
+.faq__item summary,
+.lightbox__title,
+.why__list strong,
+.faq__breakdown strong,
+.faq__answer strong,
+.sample-airline__name,
+.hero__route,
+.hero__flights {
   font-family: var(--font-heading);
   font-optical-sizing: auto;
 }
