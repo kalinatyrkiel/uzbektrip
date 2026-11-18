@@ -292,7 +292,7 @@
           id="loty-almaty"
           data-variant-panel="a"
         >
-          <p class="eyebrow">Hop regionalny · przykłady · wariant A</p>
+          <p class="eyebrow">Lot regionalny · przykłady · wariant A</p>
           <h2>Lot regionalny</h2>
           <p class="regional__lede">
             Przykłady: TAS↔ALA 23.03 rano / 25.03 wieczór.
@@ -362,7 +362,7 @@
           data-variant-panel="b"
           hidden
         >
-          <p class="eyebrow">Hop regionalny · przykłady · wariant B</p>
+          <p class="eyebrow">Lot regionalny · przykłady · wariant B</p>
           <h2>Loty regionalne</h2>
           <p class="regional__lede">
             Air Astana i Centrum Air · 5 ofert od ok. 713 zł (ALA→BSZ +
@@ -461,9 +461,48 @@
         </section>
 
         <section class="section faq" id="faq">
-          <h2>FAQ</h2>
+          <p class="eyebrow">Koszty i FAQ</p>
+          <h2>Ile to wychodzi.</h2>
+          <p class="variant-bar__title variant-bar__title--inline">
+            Duet czy tercet?
+          </p>
+          <div
+            class="variant-toggle"
+            role="tablist"
+            aria-label="Wariant kosztów"
+          >
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-cost-variant-a"
+              aria-selected="true"
+              aria-controls="cost-variant-a"
+              data-variant="a"
+            >
+              <span class="variant-toggle__code">A</span>
+              <span class="variant-toggle__label"
+                >Uzbekistan + Kazachstan</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-cost-variant-b"
+              aria-selected="false"
+              aria-controls="cost-variant-b"
+              data-variant="b"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">B</span>
+              <span class="variant-toggle__label"
+                >Uzbekistan + Kazachstan + Kirgistan</span
+              >
+            </button>
+          </div>
 
-          <div data-variant-panel="a">
+          <div data-variant-panel="a" id="cost-variant-a">
             <p class="plan__variant-tag">Wariant A — koszty i urlop</p>
 
             <details class="faq__item" open>
@@ -519,7 +558,7 @@
             </details>
           </div>
 
-          <div data-variant-panel="b" hidden>
+          <div data-variant-panel="b" id="cost-variant-b" hidden>
             <p class="plan__variant-tag">
               Wariant B — Uzbekistan + Kazachstan + Kirgistan · koszty i urlop
             </p>
@@ -528,33 +567,38 @@
               <summary>Jakie to koszty za całość?</summary>
               <div class="faq__body">
                 <p class="faq__answer">
-                  Dokładnej sumy wariantu B jeszcze nie domykamy — licz od
-                  wariantu A.
+                  Loty (przykłady): od <strong>~2910 zł</strong> / osoba
                 </p>
-                <p class="faq__note">
-                  Baza jak w A: <strong>~4400–5600 zł</strong>. Do tego dorzucasz
-                  dłuższy wyjazd (~2 noce więcej), hop regionalny ALA–BSZ–TAS od
-                  <strong>~713 zł</strong> i późniejszy powrót LOT (30.03 od
-                  ~1060 zł albo 01.04 od ~1217 zł zamiast 29.03).
+                <p class="price-banner price-banner--regional">
+                  Roundtrip lotów od <strong>~2910 zł</strong>
+                  <span>· 01.04 ≈ 3070 zł</span>
                 </p>
                 <ul class="faq__breakdown">
                   <li>
                     <span>LOT WAW → TAS (wylot)</span>
-                    <strong>wspólny z A</strong>
+                    <strong>~1136 zł</strong>
                   </li>
                   <li>
-                    <span>Powrót TAS → WAW</span>
-                    <strong>od ~1060 / ~1217 zł</strong>
+                    <span>Powrót TAS → WAW · 30.03</span>
+                    <strong>~1060 zł</strong>
                   </li>
                   <li>
                     <span>Regionalne ALA → BSZ → TAS</span>
-                    <strong>od ~713 zł</strong>
+                    <strong>~713 zł</strong>
                   </li>
                   <li>
-                    <span>TAS → ALA + hotele + lokalnie</span>
-                    <strong>jak A, plus ekstra noce</strong>
+                    <span>Suma lotów (30.03)</span>
+                    <strong>~2910 zł</strong>
+                  </li>
+                  <li>
+                    <span>Albo powrót 01.04 zamiast 30.03</span>
+                    <strong>~3070 zł łącznie</strong>
                   </li>
                 </ul>
+                <p class="faq__note">
+                  Do tego TAS → ALA (przykład jak w A), hotele (~2 noce więcej)
+                  i lokalnie — pełny budżet wyżej niż samych lotów.
+                </p>
               </div>
             </details>
 
@@ -581,10 +625,7 @@
                   <strong>01.04:</strong> 19, 22–26, 29, 30 i 31 marca
                   (<strong>9 dni</strong>).
                 </p>
-                <p class="faq__note">
-                  A to 6 dni (19–29.03). Tu weekendy też wypadają same; bez
-                  świąt państwowych w tym oknie.
-                </p>
+                <p class="faq__note">dla porównania: Wariant A to 6 dni</p>
               </div>
             </details>
           </div>
