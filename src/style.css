@@ -151,29 +151,21 @@ a {
   font-weight: 700;
   color: var(--cream);
   text-shadow: var(--text-shadow-cream);
-  max-width: 28rem;
+  max-width: 36rem;
 }
 
 .hero__route {
   margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.hero__route-sep {
+  margin: 0 0.35rem;
+  opacity: 0.75;
 }
 
 .hero__flights {
   margin-bottom: 1.5rem;
-}
-
-.hero__date {
-  display: inline-block;
-  margin-left: 0.15rem;
-  padding: 0.2rem 0.55rem;
-  font-weight: 800;
-  color: var(--burgundy-ink);
-  background: var(--teal);
-  border: 2px solid var(--burgundy);
-  border-radius: 8px;
-  text-decoration: none;
-  text-shadow: none;
-  box-shadow: 2px 2px 0 rgba(58, 26, 29, 0.35);
 }
 
 .hero__frieze {
@@ -220,6 +212,54 @@ a {
   border: 2px solid var(--burgundy);
   border-radius: 999px;
   box-shadow: 2px 2px 0 rgba(58, 26, 29, 0.2);
+}
+
+/* TLDR */
+.tldr {
+  padding-top: 2.35rem;
+}
+
+.tldr__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.tldr__row {
+  display: grid;
+  gap: 0.2rem 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--cream);
+  border: 2px solid var(--burgundy);
+  border-left-width: 5px;
+  border-left-color: var(--peach-deep);
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 0 rgba(58, 26, 29, 0.1);
+}
+
+.tldr__row dt {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-on-cream);
+}
+
+.tldr__row dd {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--burgundy-ink);
+}
+
+@media (min-width: 560px) {
+  .tldr__row {
+    grid-template-columns: 12.5rem 1fr;
+    align-items: baseline;
+  }
 }
 
 /* Why */
