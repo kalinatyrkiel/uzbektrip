@@ -740,17 +740,6 @@ a {
   border-left-color: var(--moss-deep);
 }
 
-.mid__note--direct {
-  color: var(--teal-ink);
-  font-weight: 800;
-  background: rgba(126, 200, 200, 0.45);
-  padding: 0.15rem 0.35rem;
-  border-radius: 6px;
-  border: 1.5px solid var(--teal-ink);
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 .plan__link {
   display: inline;
   margin-left: 0.15rem;
