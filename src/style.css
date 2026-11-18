@@ -1403,17 +1403,28 @@ body.lightbox-open {
   background: #6ebaba;
 }
 
+.closing {
+  padding-top: 2rem;
+  padding-bottom: 2.75rem;
+  text-align: center;
+}
+
 .closing-cheer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  margin: 1.15rem 0 0.35rem !important;
+  margin: 0;
+  padding: 0.95rem 1.2rem;
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 4.2vw, 1.55rem);
+  font-size: clamp(1.35rem, 5vw, 1.85rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--cream);
+  color: var(--burgundy-ink);
+  background: var(--cream);
+  border: 2.5px solid var(--burgundy);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .closing-cheer__plane {
