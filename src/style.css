@@ -683,6 +683,21 @@ a {
   color: var(--teal-ink);
 }
 
+.return-chip__time {
+  display: block;
+  margin-top: 0.15rem;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--burgundy-ink);
+  background: rgba(126, 200, 200, 0.45);
+  border: 1.5px solid var(--teal-ink);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
 .return-chip--unavailable {
   background: rgba(232, 223, 208, 0.7);
   border-style: dashed;
