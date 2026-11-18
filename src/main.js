@@ -10,9 +10,53 @@ const observer = new IntersectionObserver(
   { threshold: 0.16, rootMargin: '0px 0px -8% 0px' },
 )
 
-document.querySelectorAll('.section, .flight-card, .easter').forEach((el) => {
-  el.classList.add('scroll-fade')
-  observer.observe(el)
+document
+  .querySelectorAll('.section, .flight-card, .easter, .leave-tip, .return-chip')
+  .forEach((el) => {
+    el.classList.add('scroll-fade')
+    observer.observe(el)
+  })
+
+const variantButtons = [...document.querySelectorAll('[data-variant]')]
+const variantPanels = [...document.querySelectorAll('[data-variant-panel]')]
+
+function revealScrollFade(root) {
+  if (!root) return
+  if (root.classList.contains('scroll-fade')) {
+    root.classList.add('is-visible')
+  }
+  root.querySelectorAll('.scroll-fade').forEach((el) => {
+    el.classList.add('is-visible')
+  })
+}
+
+function setVariant(variant) {
+  variantButtons.forEach((btn) => {
+    const selected = btn.dataset.variant === variant
+    btn.setAttribute('aria-selected', selected ? 'true' : 'false')
+    btn.tabIndex = selected ? 0 : -1
+  })
+
+  variantPanels.forEach((panel) => {
+    const match = panel.dataset.variantPanel === variant
+    panel.hidden = !match
+    if (match) revealScrollFade(panel)
+  })
+}
+
+variantButtons.forEach((btn) => {
+  btn.addEventListener('click', () => setVariant(btn.dataset.variant))
+  btn.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
+    event.preventDefault()
+    const index = variantButtons.indexOf(btn)
+    const next =
+      event.key === 'ArrowRight'
+        ? variantButtons[(index + 1) % variantButtons.length]
+        : variantButtons[(index - 1 + variantButtons.length) % variantButtons.length]
+    setVariant(next.dataset.variant)
+    next.focus()
+  })
 })
 
 const style = document.createElement('style')
