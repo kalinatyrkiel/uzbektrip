@@ -694,7 +694,7 @@ a {
   padding-bottom: 0;
 }
 
-.variant-bar--regional + .flights--regional {
+.variant-bar--regional ~ .flights--regional {
   padding-top: 0.35rem;
 }
 
