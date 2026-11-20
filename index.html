@@ -173,9 +173,9 @@
               tabindex="0"
               aria-haspopup="dialog"
               aria-controls="lightbox-metro"
-              aria-label="Pokaż zdjęcie metra w Taszkencie"
+              aria-label="Pokaż sowiecką architekturę"
             >
-              <strong>Metro w Taszkencie</strong>
+              <strong>Spektakularna sowiecka architektura</strong>
               Siema, brutalistyczne świry
             </li>
             <li
@@ -1205,7 +1205,7 @@
       ></button>
       <div class="lightbox__panel" role="document">
         <h2 class="lightbox__title" id="lightbox-metro-title">
-          Metro w Taszkencie
+          Spektakularna sowiecka architektura
         </h2>
         <button
           type="button"
@@ -1215,13 +1215,53 @@
         >
           ×
         </button>
-        <img
-          class="lightbox__img"
-          src="metro-tashkent.png"
-          alt="Metro w Taszkencie — stacja z dekoracyjnymi kolumnami i oświetleniem"
-          width="739"
-          height="415"
-        />
+        <div
+          class="lightbox-carousel"
+          data-lightbox-carousel
+          data-carousel-cities
+        >
+          <div class="lightbox-carousel__viewport">
+            <ul class="lightbox-carousel__track" data-lightbox-carousel-track>
+              <li
+                class="lightbox-carousel__slide is-active"
+                data-city="taszkent"
+              >
+                <img
+                  class="lightbox__img"
+                  src="metro-tashkent.png"
+                  alt="Metro w Taszkencie — stacja z dekoracyjnymi kolumnami i oświetleniem"
+                  width="739"
+                  height="415"
+                />
+                <p class="lightbox-carousel__caption">Taszkent</p>
+              </li>
+            </ul>
+          </div>
+          <div class="lightbox-carousel__controls">
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-prev
+              aria-label="Poprzednie zdjęcie"
+            >
+              ←
+            </button>
+            <div
+              class="lightbox-carousel__dots"
+              data-lightbox-carousel-dots
+              role="tablist"
+              aria-label="Miasta — sowiecka architektura"
+            ></div>
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-next
+              aria-label="Następne zdjęcie"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
