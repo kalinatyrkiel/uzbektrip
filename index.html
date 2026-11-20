@@ -58,15 +58,17 @@
             <span class="hero__option">(bonusowo Kirgistan?)</span>
           </h1>
           <p class="hero__route reveal delay-2">
-            Wariant A: 10 dni:
-            <span class="flag" title="Uzbekistan" aria-label="Uzbekistan">🇺🇿</span>
-            Taszkent
-            <span class="flag" title="Uzbekistan" aria-label="Uzbekistan">🇺🇿</span>
-            Samarkanda
+            Wariant A: 12 dni · najpierw
+            <span class="flag" title="Kirgistan" aria-label="Kirgistan">🇰🇬</span>
+            Biszkek →
             <span class="flag" title="Kazachstan" aria-label="Kazachstan">🇰🇿</span>
             Ałmaty
             <span class="hero__route-b"
-              >Wariant B: 12 dni +
+              >Wariant B: 12 dni · najpierw
+              <span class="flag" title="Kazachstan" aria-label="Kazachstan"
+                >🇰🇿</span
+              >
+              Ałmaty →
               <span class="flag" title="Kirgistan" aria-label="Kirgistan"
                 >🇰🇬</span
               >
@@ -93,11 +95,9 @@
             <div class="tldr__row">
               <dt>Wariant A</dt>
               <dd>
-                10 dni:
-                <span class="flag" title="Uzbekistan" aria-label="Uzbekistan">🇺🇿</span>
-                Taszkent
-                <span class="flag" title="Uzbekistan" aria-label="Uzbekistan">🇺🇿</span>
-                Samarkanda
+                12 dni · najpierw
+                <span class="flag" title="Kirgistan" aria-label="Kirgistan">🇰🇬</span>
+                Biszkek →
                 <span class="flag" title="Kazachstan" aria-label="Kazachstan">🇰🇿</span>
                 Ałmaty
               </dd>
@@ -105,7 +105,9 @@
             <div class="tldr__row">
               <dt>Wariant B</dt>
               <dd>
-                12 dni +
+                12 dni · najpierw
+                <span class="flag" title="Kazachstan" aria-label="Kazachstan">🇰🇿</span>
+                Ałmaty →
                 <span class="flag" title="Kirgistan" aria-label="Kirgistan">🇰🇬</span>
                 Biszkek
               </dd>
@@ -116,7 +118,7 @@
             </div>
             <div class="tldr__row">
               <dt>Urlop</dt>
-              <dd>od 6 do 9 dni</dd>
+              <dd>7 dni przy powrocie 30.03</dd>
             </div>
             <div class="tldr__row">
               <dt>Koszt orientacyjnie</dt>
@@ -183,7 +185,7 @@
 
         <div class="section variant-bar" id="wariant">
           <p class="eyebrow">Wariant wyjazdu</p>
-          <h2 class="variant-bar__title">Duet czy tercet?</h2>
+          <h2 class="variant-bar__title">Warianty 10 lub 12 dni</h2>
           <div
             class="variant-toggle"
             role="tablist"
@@ -200,7 +202,7 @@
             >
               <span class="variant-toggle__code">A</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan</span
+                >Najpierw Biszkek → Ałmaty</span
               >
             </button>
             <button
@@ -215,7 +217,7 @@
             >
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan + Kirgistan</span
+                >Najpierw Ałmaty → Biszkek</span
               >
             </button>
           </div>
@@ -255,57 +257,36 @@
 
           <div data-variant-panel="a">
             <p class="price-banner">
-              Roundtrip <strong>2528,84 PLN</strong>
-              <span>/ osoba</span>
-            </p>
-
-            <article class="flight-card">
-              <span class="flight-card__badge">Powrót · 29.03.2027</span>
-              <div class="flight-card__route">
-                <div class="leg">
-                  <span class="leg__code">TAS</span>
-                  <span class="leg__time">10:00</span>
-                  <span class="leg__city">Taszkent</span>
-                </div>
-                <div class="mid">
-                  <span class="mid__dur">6h 50min</span>
-                  <span class="mid__line" aria-hidden="true"></span>
-                  <span class="mid__note">Lot bez przesiadki</span>
-                </div>
-                <div class="leg leg--end">
-                  <span class="leg__code">WAW</span>
-                  <span class="leg__time">13:50</span>
-                  <span class="leg__city">Warszawa</span>
-                </div>
-              </div>
-              <div class="flight-card__meta">
-                <span>od 1393,26 PLN w jedną stronę</span>
-              </div>
-            </article>
-
-          </div>
-
-          <div data-variant-panel="b" hidden>
-            <p class="price-banner">
               Roundtrip średnio <strong>~2270 PLN</strong>
-              <span>z próbek 30.03 i 01.04</span>
+              <span>z próbki 30.03</span>
             </p>
             <p class="regional__lede">
-              Powrót LOT TAS → WAW · przykłady na koniec 12 dni. Oba loty:
-              ~2:00 w nocy.
+              Powrót LOT TAS → WAW · 30.03 · ~2:00 w nocy.
             </p>
-            <div class="return-strip" aria-label="Przykładowe daty powrotu LOT">
-              <article class="return-chip">
+            <div class="return-strip" aria-label="Przykładowa data powrotu LOT">
+              <article class="return-chip return-chip--pick">
                 <span class="return-chip__price">od 1060,39 PLN</span>
                 <span class="return-chip__date"
                   ><time datetime="2027-03-30">wt 30.03</time></span
                 >
                 <span class="return-chip__time">TAS → WAW · ~2:00 w nocy</span>
               </article>
+            </div>
+          </div>
+
+          <div data-variant-panel="b" hidden>
+            <p class="price-banner">
+              Roundtrip średnio <strong>~2270 PLN</strong>
+              <span>z próbki 30.03</span>
+            </p>
+            <p class="regional__lede">
+              Powrót LOT TAS → WAW · 30.03 · ~2:00 w nocy.
+            </p>
+            <div class="return-strip" aria-label="Przykładowa data powrotu LOT">
               <article class="return-chip return-chip--pick">
-                <span class="return-chip__price">od 1217,09 PLN</span>
+                <span class="return-chip__price">od 1060,39 PLN</span>
                 <span class="return-chip__date"
-                  ><time datetime="2027-04-01">czw 01.04</time></span
+                  ><time datetime="2027-03-30">wt 30.03</time></span
                 >
                 <span class="return-chip__time">TAS → WAW · ~2:00 w nocy</span>
               </article>
@@ -424,7 +405,7 @@
             >
               <span class="variant-toggle__code">A</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan</span
+                >Najpierw Biszkek → Ałmaty</span
               >
             </button>
             <button
@@ -439,7 +420,7 @@
             >
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan + Kirgistan</span
+                >Najpierw Ałmaty → Biszkek</span
               >
             </button>
           </div>
@@ -632,7 +613,7 @@
             >
               <span class="variant-toggle__code">A</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan</span
+                >Najpierw Biszkek → Ałmaty</span
               >
             </button>
             <button
@@ -647,7 +628,7 @@
             >
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan + Kirgistan</span
+                >Najpierw Ałmaty → Biszkek</span
               >
             </button>
           </div>
@@ -657,24 +638,24 @@
               <summary>Jakie to koszty za całość?</summary>
               <div class="faq__body">
                 <p class="faq__answer">
-                  Wariant A · na osobę: <strong>ok. 4400–5600 zł</strong>
+                  Wariant A · na osobę: <strong>ok. 5100–6500 zł</strong>
                 </p>
                 <ul class="faq__breakdown">
                   <li>
                     <span>Roundtrip WAW ↔ TAS (LOT)</span>
-                    <strong>~2530 zł</strong>
+                    <strong>~2200–2350 zł · średnio ~2270</strong>
                   </li>
                   <li>
-                    <span>Loty regionalne TAS ↔ ALA</span>
-                    <strong>~800 zł</strong>
+                    <span>Loty regionalne + pociąg</span>
+                    <strong>~1300 zł</strong>
                   </li>
                   <li>
-                    <span>Hotele (~9 nocy × ~100–180 zł)</span>
-                    <strong>~900–1600 zł</strong>
+                    <span>Hotele (~11 nocy × ~120–200 zł)</span>
+                    <strong>~1300–2200 zł</strong>
                   </li>
                   <li>
                     <span>Lokalnie (pociąg, metro, taxi)</span>
-                    <strong>~200–450 zł</strong>
+                    <strong>~250–500 zł</strong>
                   </li>
                 </ul>
               </div>
@@ -684,12 +665,14 @@
               <summary>Ile to dni urlopu?</summary>
               <div class="faq__body">
                 <p class="faq__answer">
-                  Wariant A: <strong>6 dni urlopu</strong>
+                  Wariant A: <strong>7 dni urlopu</strong> przy powrocie
+                  <time datetime="2027-03-30">30.03</time>
                 </p>
                 <p>
                   Wylot <time datetime="2027-03-19">19.03</time> (pt), powrót
-                  <time datetime="2027-03-29">29.03</time> (pon). Do wzięcia:
-                  <strong>19, 22, 23, 24, 25 i 26 marca</strong>.
+                  <time datetime="2027-03-30">30.03</time> (~2:00 w nocy). Do
+                  wzięcia:
+                  <strong>19, 22, 23, 24, 25, 26 i 29 marca</strong>.
                 </p>
               </div>
             </details>
@@ -728,25 +711,19 @@
               <div class="faq__body">
                 <p class="faq__answer">
                   Wariant B: <strong>7 dni urlopu</strong> przy powrocie
-                  <time datetime="2027-03-30">30.03</time> · albo
-                  <strong>9 dni</strong> przy powrocie
-                  <time datetime="2027-04-01">01.04</time>.
+                  <time datetime="2027-03-30">30.03</time>
                 </p>
                 <p>
                   Wylot jak w A:
-                  <time datetime="2027-03-19">19.03</time> (pt). Oba powroty TAS
-                  → WAW ~2:00 w nocy — rano polskiego czasu już Warszawa, więc
-                  uparta osoba może w dniu wylotu normalnie pracować.
+                  <time datetime="2027-03-19">19.03</time> (pt). Powrót TAS →
+                  WAW ~2:00 w nocy — rano polskiego czasu już Warszawa.
                 </p>
                 <p>
-                  <strong>30.03:</strong> 19, 22, 23, 24, 25, 26 i 29 marca
-                  (<strong>7 dni</strong>).
+                  Do wzięcia:
+                  <strong>19, 22, 23, 24, 25, 26 i 29 marca</strong> ·
+                  <strong>7 dni</strong>.
                 </p>
-                <p>
-                  <strong>01.04:</strong> 19, 22–26, 29, 30 i 31 marca
-                  (<strong>9 dni</strong>).
-                </p>
-                <p class="faq__note">dla porównania: Wariant A to 6 dni</p>
+                <p class="faq__note">ta sama liczba dni urlopu co w A</p>
               </div>
             </details>
           </div>
@@ -754,7 +731,7 @@
 
         <section class="section plan" id="plan">
           <p class="eyebrow">Plan wyjazdu</p>
-          <h2>Dzień po dniu</h2>
+          <h2>Warianty 10 lub 12 dni</h2>
           <div
             class="variant-toggle"
             role="tablist"
@@ -771,7 +748,7 @@
             >
               <span class="variant-toggle__code">A</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan</span
+                >Najpierw Biszkek → Ałmaty</span
               >
             </button>
             <button
@@ -786,7 +763,7 @@
             >
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
-                >Uzbekistan + Kazachstan + Kirgistan</span
+                >Najpierw Ałmaty → Biszkek</span
               >
             </button>
           </div>
@@ -800,8 +777,8 @@
           >
             <ol class="plan__list">
               <li class="plan__item plan__item--uz">
-                <span class="plan__day">D1 · 19/20.03 · Taszkent</span>
-                <p>LOT ląduje ~01:55. Szybka drzemka i lecimy!</p>
+                <span class="plan__day">D1 · 19.03 · Taszkent</span>
+                <p>LOT ląduje w nocy. Drzemka i jesteśmy w grze.</p>
               </li>
               <li
                 class="plan__item plan__item--uz plan__item--photo"
@@ -812,11 +789,8 @@
                 aria-controls="lightbox-samarkanda"
                 aria-label="Pokaż zdjęcie Samarkandy"
               >
-                <span class="plan__day">D2 · 21.03 · Samarkanda</span>
-                <p>
-                  Szybki pociąg Afrosiyob, 2h i jesteśmy. Błękitne mozaiki,
-                  czas start!
-                </p>
+                <span class="plan__day">D2 · 20.03 · TAS → Samarkanda</span>
+                <p>Afrosiyob, 2h i błękitne kafelki witają.</p>
               </li>
               <li
                 class="plan__item plan__item--uz plan__item--photo"
@@ -827,37 +801,40 @@
                 aria-controls="lightbox-samarkanda"
                 aria-label="Pokaż zdjęcie Samarkandy"
               >
-                <span class="plan__day">D3 · 22.03 · Samarkanda</span>
+                <span class="plan__day">D3–D4 · 21–22.03 · Samarkanda</span>
+                <p>Registan, meczety, zero pośpiechu. Pełne dwa dni w mieście.</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day"
+                  >D5 · 23.03 · Samarkanda → TAS · pociąg</span
+                >
                 <p>
-                  Meczety, zwiedzanie, smaki i zapachy. Wieczorem pociąg z
-                  powrotem do Taszkentu. Bo rano lot do Kazachstanu.
+                  Pociąg wraca do Taszkentu. Noc w TAS — jutro lot, nie dziś.
                 </p>
               </li>
               <li
-                class="plan__item plan__item--kz plan__item--photo"
-                data-lightbox="almaty"
+                class="plan__item plan__item--kg plan__item--photo"
+                data-lightbox="bishkek"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-almaty"
-                aria-label="Pokaż zdjęcie Ałmatów"
+                aria-controls="lightbox-bishkek"
+                aria-label="Pokaż zdjęcie Biszkeku"
               >
-                <span class="plan__day">D4 · 23.03 · TAS → Ałmaty</span>
-                <p>Poranny lot regionalny. Hello, Ałmaty!</p>
+                <span class="plan__day">D6 · 24.03 · TAS → Biszkek</span>
+                <p>Lot regionalny. Hello, Kirgistan — najpierw Biszkek.</p>
               </li>
               <li
-                class="plan__item plan__item--kz plan__item--photo"
-                data-lightbox="almaty-horses"
+                class="plan__item plan__item--kg plan__item--photo"
+                data-lightbox="bishkek"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-almaty-horses"
-                aria-label="Pokaż zdjęcie koni pod Ałmatami"
+                aria-controls="lightbox-bishkek"
+                aria-label="Pokaż zdjęcie Biszkeku"
               >
-                <span class="plan__day">D5 · 24.03 · Ałmaty</span>
-                <p>
-                  Spektakularne miasto u stóp gór – dla każdego coś miłego.
-                </p>
+                <span class="plan__day">D7 · 25.03 · Biszkek</span>
+                <p>Stolica, bazar i klimat, którego nie da się podrobić.</p>
                 <p>Dla chętnych możliwe konie 🐴</p>
               </li>
               <li
@@ -869,52 +846,42 @@
                 aria-controls="lightbox-almaty"
                 aria-label="Pokaż zdjęcie Ałmatów"
               >
-                <span class="plan__day">D6 · 25.03 · Ałmaty → TAS</span>
-                <p>
-                  Ostatni dzień w Kazachstanie, lot powrotny do Taszkentu
-                  wieczorem lub popołudniem.
-                </p>
+                <span class="plan__day">D8 · 26.03 · Biszkek → Ałmaty</span>
+                <p>Przeskok do Kazachstanu. Góry już machają.</p>
               </li>
               <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="metro"
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-metro"
-                aria-label="Pokaż zdjęcie metra w Taszkencie"
+                aria-controls="lightbox-almaty"
+                aria-label="Pokaż zdjęcie Ałmatów"
               >
-                <span class="plan__day">D7 · 26.03 · Taszkent</span>
-                <p>Metro i socrealizm na spokojnie.</p>
+                <span class="plan__day">D9 · 27.03 · Ałmaty</span>
+                <p>Dzień na miasto u stóp Tian Shan. Kawa i spacery.</p>
               </li>
               <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="metro"
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty-horses"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-metro"
-                aria-label="Pokaż zdjęcie metra w Taszkencie"
+                aria-controls="lightbox-almaty-horses"
+                aria-label="Pokaż zdjęcie koni pod Ałmatami"
               >
-                <span class="plan__day">D8 · 27.03 · Taszkent chill</span>
-                <p>Brutalizm, kawusia, zero pośpiechu. Brut-chillera day.</p>
-              </li>
-              <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="navruz"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                aria-controls="lightbox-navruz"
-                aria-label="Pokaż zdjęcie Navruz"
-              >
-                <span class="plan__day">D9 · 28.03 · Taszkent</span>
-                <p>Ostatni pełny dzień. Pożegnalny plov.</p>
+                <span class="plan__day">D10 · 28.03 · Ałmaty · góry</span>
+                <p>Dla chętnych: po to buty trekkingowe leciały w bagażu.</p>
+                <p>Dla chętnych możliwe konie 🐴</p>
               </li>
               <li class="plan__item plan__item--uz">
-                <span class="plan__day">D10 · 29.03 · LOT do domu</span>
+                <span class="plan__day">D11 · 29.03 · Ałmaty → TAS</span>
+                <p>Lot powrotny do bazy. Pakowanie „na spokojnie”.</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day">D12 · 30.03 · LOT do domu</span>
                 <p>
-                  TAS 10:00 → WAW 13:50. Załapiesz się jeszcze na jarzynową.
+                  TAS → WAW ~2:00 w nocy. Rano polskiego czasu już Warszawa.
                 </p>
               </li>
             </ol>
@@ -929,19 +896,40 @@
             hidden
           >
             <ol class="plan__list">
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day">D1 · 19.03 · Taszkent</span>
+                <p>LOT ląduje w nocy. Drzemka i jesteśmy w grze.</p>
+              </li>
               <li
                 class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="metro"
+                data-lightbox="samarkanda"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-metro"
-                aria-label="Pokaż zdjęcie metra w Taszkencie"
+                aria-controls="lightbox-samarkanda"
+                aria-label="Pokaż zdjęcie Samarkandy"
               >
-                <span class="plan__day">D1–D2 · Taszkent</span>
+                <span class="plan__day">D2 · 20.03 · TAS → Samarkanda</span>
+                <p>Afrosiyob, 2h i błękitne kafelki witają.</p>
+              </li>
+              <li
+                class="plan__item plan__item--uz plan__item--photo"
+                data-lightbox="samarkanda"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-samarkanda"
+                aria-label="Pokaż zdjęcie Samarkandy"
+              >
+                <span class="plan__day">D3–D4 · 21–22.03 · Samarkanda</span>
+                <p>Registan, meczety, zero pośpiechu. Pełne dwa dni w mieście.</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day"
+                  >D5 · 23.03 · Samarkanda → TAS · pociąg</span
+                >
                 <p>
-                  Lądowanie w nocy, plov w dzień. Metro i brutalizm na
-                  rozgrzewkę.
+                  Pociąg wraca do Taszkentu. Noc w TAS — jutro lot, nie dziś.
                 </p>
               </li>
               <li
@@ -953,8 +941,20 @@
                 aria-controls="lightbox-almaty"
                 aria-label="Pokaż zdjęcie Ałmatów"
               >
-                <span class="plan__day">D3 · Lot do Ałmaty</span>
-                <p>Pakujemy się i hop — góry już machają.</p>
+                <span class="plan__day">D6 · 24.03 · TAS → Ałmaty</span>
+                <p>Lot regionalny. Hello, Ałmaty — najpierw Kazachstan.</p>
+              </li>
+              <li
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-almaty"
+                aria-label="Pokaż zdjęcie Ałmatów"
+              >
+                <span class="plan__day">D7 · 25.03 · Ałmaty</span>
+                <p>Dzień na miasto u stóp Tian Shan. Kawa i spacery.</p>
               </li>
               <li
                 class="plan__item plan__item--kz plan__item--photo"
@@ -965,26 +965,21 @@
                 aria-controls="lightbox-almaty-horses"
                 aria-label="Pokaż zdjęcie koni pod Ałmatami"
               >
-                <span class="plan__day">D4 · Ałmaty · miasto</span>
-                <p>
-                  Dzień na miasto u stóp Tian Shan. Kawa, spacery, zero
-                  pośpiechu.
-                </p>
+                <span class="plan__day">D8 · 26.03 · Ałmaty · góry</span>
+                <p>Dla chętnych: po to buty trekkingowe leciały w bagażu.</p>
                 <p>Dla chętnych możliwe konie 🐴</p>
               </li>
               <li
-                class="plan__item plan__item--kz plan__item--photo"
-                data-lightbox="almaty"
+                class="plan__item plan__item--kg plan__item--photo"
+                data-lightbox="bishkek"
                 role="button"
                 tabindex="0"
                 aria-haspopup="dialog"
-                aria-controls="lightbox-almaty"
-                aria-label="Pokaż zdjęcie Ałmatów"
+                aria-controls="lightbox-bishkek"
+                aria-label="Pokaż zdjęcie Biszkeku"
               >
-                <span class="plan__day">D5 · Ałmaty · hike</span>
-                <p>
-                  Dla chętnych: po to buty trekkingowe leciały w bagażu.
-                </p>
+                <span class="plan__day">D9 · 27.03 · Ałmaty → Biszkek</span>
+                <p>Przeskok do Kirgistanu. Kraj 3 z 3.</p>
               </li>
               <li
                 class="plan__item plan__item--kg plan__item--photo"
@@ -995,67 +990,18 @@
                 aria-controls="lightbox-bishkek"
                 aria-label="Pokaż zdjęcie Biszkeku"
               >
-                <span class="plan__day">D6 · Lot do Biszkeku</span>
-                <p>Kraj 3 z 3. Hello, Kirgistan!</p>
-              </li>
-              <li
-                class="plan__item plan__item--kg plan__item--photo"
-                data-lightbox="bishkek"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                aria-controls="lightbox-bishkek"
-                aria-label="Pokaż zdjęcie Biszkeku"
-              >
-                <span class="plan__day">D7 · Biszkek</span>
+                <span class="plan__day">D10 · 28.03 · Biszkek</span>
                 <p>Stolica, bazar i klimat, którego nie da się podrobić.</p>
                 <p>Dla chętnych możliwe konie 🐴</p>
               </li>
               <li class="plan__item plan__item--uz">
-                <span class="plan__day">D8 · Lot do Taszkentu</span>
-                <p>Z powrotem do bazy.</p>
-              </li>
-              <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="samarkanda"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                aria-controls="lightbox-samarkanda"
-                aria-label="Pokaż zdjęcie Samarkandy"
-              >
-                <span class="plan__day">D9 · Pociąg do Samarkandy</span>
-                <p>Szybki pociąg Afrosiyob. Czas na błękitne kafelki!</p>
-              </li>
-              <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="samarkanda"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                aria-controls="lightbox-samarkanda"
-                aria-label="Pokaż zdjęcie Samarkandy"
-              >
-                <span class="plan__day">D10 · Samarkanda → TAS</span>
-                <p>Registan na dzień, pociąg na wieczór. Powrót do Taszkentu.</p>
-              </li>
-              <li
-                class="plan__item plan__item--uz plan__item--photo"
-                data-lightbox="metro"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                aria-controls="lightbox-metro"
-                aria-label="Pokaż zdjęcie metra w Taszkencie"
-              >
-                <span class="plan__day">D11 · Taszkent</span>
-                <p>Ostatni chill. Socrealizm i pożegnalny plov.</p>
+                <span class="plan__day">D11 · 29.03 · Biszkek → TAS</span>
+                <p>Lot powrotny do bazy. Pakowanie „na spokojnie”.</p>
               </li>
               <li class="plan__item plan__item--uz">
-                <span class="plan__day">D12 · Wylot · ~30.03 / 01.04</span>
+                <span class="plan__day">D12 · 30.03 · LOT do domu</span>
                 <p>
-                  LOT TAS → WAW. W tej wersji o 2 w nocy. Rano polskiego czasu
-                  już Warszawa.
+                  TAS → WAW ~2:00 w nocy. Rano polskiego czasu już Warszawa.
                 </p>
               </li>
             </ol>
