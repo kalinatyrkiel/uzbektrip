@@ -132,18 +132,29 @@ a {
 }
 
 .brand {
+  display: inline-block;
   margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-family: var(--font-pixel);
   font-size: clamp(0.78rem, 2.8vw, 0.98rem);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  text-align: left;
   color: var(--cream);
   text-shadow:
     3px 3px 0 var(--burgundy),
     -1px 0 0 var(--burgundy),
     0 -1px 0 var(--burgundy),
     1px 0 0 var(--burgundy);
+  cursor: pointer;
   animation: brand-pop 0.7s cubic-bezier(0.2, 0.9, 0.2, 1.2) both;
+}
+
+.brand:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
 }
 
 .brand--sm {
@@ -187,7 +198,10 @@ a {
   margin-bottom: 0.45rem;
   max-width: 42rem;
   line-height: 1.4;
-  text-wrap: balance;
+}
+
+.hero__route-line {
+  display: block;
 }
 
 .hero__route-sep {
@@ -1365,8 +1379,99 @@ a {
   border: 2px solid var(--burgundy);
 }
 
-body.lightbox-open {
+body.lightbox-open,
+body.qr-modal-open {
   overflow: hidden;
+}
+
+/* QR modal */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.qr-modal[hidden] {
+  display: none;
+}
+
+.qr-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(31, 18, 20, 0.82);
+  cursor: pointer;
+}
+
+.qr-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 28rem);
+  padding: 1rem 1rem 1.15rem;
+  background: var(--cream);
+  border: 2.5px solid var(--burgundy);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.qr-modal__title {
+  margin: 0 2.5rem 0.85rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--burgundy-ink);
+}
+
+.qr-modal__close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 2px solid var(--burgundy);
+  border-radius: 10px;
+  background: var(--teal);
+  color: var(--burgundy-ink);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qr-modal__close:hover {
+  background: #6ebaba;
+}
+
+.qr-modal__close:focus-visible {
+  outline: 3px solid var(--teal-deep);
+  outline-offset: 2px;
+}
+
+.qr-modal__img {
+  display: block;
+  width: min(90vw, 420px);
+  min-width: 320px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid var(--burgundy);
+  background: #fff;
+}
+
+@media (max-width: 360px) {
+  .qr-modal__img {
+    min-width: 0;
+    width: min(90vw, 420px);
+  }
 }
 
 /* Footer */

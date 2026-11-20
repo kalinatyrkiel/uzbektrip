@@ -148,13 +148,53 @@ document.querySelectorAll('[data-lightbox-close]').forEach((btn) => {
   })
 })
 
+const qrModal = document.getElementById('qr-modal')
+let qrTrigger = null
+
+function openQrModal(trigger) {
+  if (!qrModal || !qrModal.hidden) return
+  qrTrigger = trigger || document.activeElement
+  qrModal.hidden = false
+  document.body.classList.add('qr-modal-open')
+  const closeBtn = qrModal.querySelector('.qr-modal__close')
+  const focusTarget = closeBtn || qrModal
+  if (typeof focusTarget.focus === 'function') {
+    try {
+      focusTarget.focus({ preventScroll: true })
+    } catch {
+      focusTarget.focus()
+    }
+  }
+}
+
+function closeQrModal() {
+  if (!qrModal || qrModal.hidden) return
+  qrModal.hidden = true
+  document.body.classList.remove('qr-modal-open')
+  if (qrTrigger && typeof qrTrigger.focus === 'function') {
+    qrTrigger.focus()
+  }
+  qrTrigger = null
+}
+
+document.querySelectorAll('[data-qr-open]').forEach((btn) => {
+  btn.addEventListener('click', () => openQrModal(btn))
+})
+
+document.querySelectorAll('[data-qr-close]').forEach((btn) => {
+  btn.addEventListener('click', () => closeQrModal())
+})
+
 document.addEventListener('keydown', (event) => {
-  const open = [...lightboxes.values()].find((el) => !el.hidden)
+  const qrOpen = qrModal && !qrModal.hidden
+  const openLightboxEl = [...lightboxes.values()].find((el) => !el.hidden)
+  const open = qrOpen ? qrModal : openLightboxEl
   if (!open) return
 
   if (event.key === 'Escape') {
     event.preventDefault()
-    closeLightbox(open)
+    if (qrOpen) closeQrModal()
+    else closeLightbox(openLightboxEl)
     return
   }
 

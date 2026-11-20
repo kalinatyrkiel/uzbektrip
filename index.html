@@ -52,14 +52,27 @@
         <div class="hero__pattern" aria-hidden="true"></div>
         <div class="hero__veil" aria-hidden="true"></div>
         <div class="hero__content">
-          <p class="brand reveal">Kalina Travel Prezentuje</p>
+          <button
+            type="button"
+            class="brand reveal"
+            data-qr-open
+            aria-haspopup="dialog"
+            aria-controls="qr-modal"
+          >
+            Kalina Travel Prezentuje
+          </button>
           <h1 class="hero__title reveal delay-1">
             Uzbekistan + Kazachstan
             <span class="hero__option">(bonusowo Kirgistan?)</span>
           </h1>
           <p class="hero__route reveal delay-2">
-            Warianty 10 lub 12 dni: 🇺🇿 Taszkent · 🇺🇿 Samarkanda · 🇰🇿 Ałmaty ·
-            🇰🇬 Biszkek 2 lub 3 kraje, kolejność do ustalenia
+            <span class="hero__route-line"
+              >Warianty 10 lub 12 dni: 🇺🇿 Taszkent · 🇺🇿 Samarkanda · 🇰🇿 Ałmaty ·
+              🇰🇬 Biszkek</span
+            >
+            <span class="hero__route-line"
+              >2 lub 3 kraje, kolejność do ustalenia</span
+            >
           </p>
           <p class="hero__flights reveal delay-2">LOT WAW ↔ TAS</p>
         </div>
@@ -1095,7 +1108,15 @@
       </main>
 
       <footer class="footer">
-        <p class="brand brand--sm">Kalina Travel Prezentuje</p>
+        <button
+          type="button"
+          class="brand brand--sm"
+          data-qr-open
+          aria-haspopup="dialog"
+          aria-controls="qr-modal"
+        >
+          Kalina Travel Prezentuje
+        </button>
         <p>Uzbekistan × Kazachstan (bonusowo Kirgistan?) · marzec 2027</p>
         <a href="#top">Wróć na górę</a>
       </footer>
@@ -1309,6 +1330,40 @@
           alt="Navruz w Taszkencie — stoły z jedzeniem i celebracja"
           width="555"
           height="360"
+        />
+      </div>
+    </div>
+
+    <div
+      class="qr-modal"
+      id="qr-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="qr-modal-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="qr-modal__backdrop"
+        data-qr-close
+        aria-label="Zamknij kod QR"
+      ></button>
+      <div class="qr-modal__panel" role="document">
+        <h2 class="qr-modal__title" id="qr-modal-title">Kalina Travel</h2>
+        <button
+          type="button"
+          class="qr-modal__close"
+          data-qr-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <img
+          class="qr-modal__img"
+          src="brand-qr.png"
+          alt="Kod QR Kalina Travel"
+          width="2000"
+          height="2000"
         />
       </div>
     </div>
