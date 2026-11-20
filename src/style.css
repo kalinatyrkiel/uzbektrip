@@ -1604,6 +1604,46 @@ body.qr-modal-open {
   background: #6ebaba;
 }
 
+.questions-cta {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-top: 0.35rem;
+  padding-bottom: 0.85rem;
+}
+
+.questions-cta--bottom {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.questions-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.7rem 1.15rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 3.6vw, 1.12rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--burgundy-ink);
+  text-decoration: none;
+  background: var(--teal);
+  border: 2.5px solid var(--burgundy);
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 rgba(58, 26, 29, 0.28);
+}
+
+.questions-cta__btn:hover {
+  background: #6ebaba;
+}
+
+.questions-cta__btn:focus-visible {
+  outline: 3px solid var(--cream);
+  outline-offset: 3px;
+}
+
 .closing {
   padding-top: 2rem;
   padding-bottom: 2.75rem;
