@@ -1324,13 +1324,57 @@
         >
           ×
         </button>
-        <img
-          class="lightbox__img"
-          src="navruz.png"
-          alt="Navruz w Taszkencie — stoły z jedzeniem i celebracja"
-          width="555"
-          height="360"
-        />
+        <div class="lightbox-carousel" data-lightbox-carousel>
+          <div class="lightbox-carousel__viewport">
+            <ul class="lightbox-carousel__track" data-lightbox-carousel-track>
+              <li class="lightbox-carousel__slide is-active">
+                <img
+                  class="lightbox__img"
+                  src="navruz.png"
+                  alt="Navruz w Taszkencie — stoły z jedzeniem i celebracja"
+                  width="555"
+                  height="360"
+                />
+              </li>
+              <li class="lightbox-carousel__slide">
+                <img
+                  class="lightbox__img"
+                  src="kupkari.png"
+                  alt="Kupkari (tradycyjne wyścigi)"
+                  width="900"
+                  height="600"
+                />
+                <p class="lightbox-carousel__caption">
+                  Kupkari (tradycyjne wyścigi)
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="lightbox-carousel__controls">
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-prev
+              aria-label="Poprzednie zdjęcie"
+            >
+              ←
+            </button>
+            <div
+              class="lightbox-carousel__dots"
+              data-lightbox-carousel-dots
+              role="tablist"
+              aria-label="Slajdy Navruz"
+            ></div>
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-next
+              aria-label="Następne zdjęcie"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 

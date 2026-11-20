@@ -109,6 +109,11 @@ function openLightbox(id, trigger) {
   dialog.hidden = false
   document.body.classList.add('lightbox-open')
 
+  const carousel = dialog.querySelector('[data-lightbox-carousel]')
+  if (carousel && typeof carousel._goTo === 'function') {
+    carousel._goTo(0)
+  }
+
   const closeBtn = dialog.querySelector('.lightbox__close')
   const focusTarget = closeBtn || dialog
   if (typeof focusTarget.focus === 'function') {
@@ -198,6 +203,22 @@ document.addEventListener('keydown', (event) => {
     return
   }
 
+  if (!qrOpen && openLightboxEl) {
+    const carousel = openLightboxEl.querySelector('[data-lightbox-carousel]')
+    if (carousel && typeof carousel._step === 'function') {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault()
+        carousel._step(-1)
+        return
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault()
+        carousel._step(1)
+        return
+      }
+    }
+  }
+
   if (event.key !== 'Tab') return
 
   const focusable = getFocusable(open)
@@ -217,6 +238,98 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault()
     first.focus()
   }
+})
+
+document.querySelectorAll('[data-lightbox-carousel]').forEach((root) => {
+  const track = root.querySelector('[data-lightbox-carousel-track]')
+  const slides = [...root.querySelectorAll('.lightbox-carousel__slide')]
+  const dotsWrap = root.querySelector('[data-lightbox-carousel-dots]')
+  const prevBtn = root.querySelector('[data-lightbox-carousel-prev]')
+  const nextBtn = root.querySelector('[data-lightbox-carousel-next]')
+  if (!track || slides.length === 0) return
+
+  let index = 0
+  let startX = 0
+  let deltaX = 0
+  let dragging = false
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button')
+    dot.type = 'button'
+    dot.className = 'lightbox-carousel__dot'
+    dot.setAttribute('role', 'tab')
+    dot.setAttribute('aria-label', `Slajd ${i + 1}`)
+    dot.addEventListener('click', () => goTo(i))
+    dotsWrap?.appendChild(dot)
+  })
+
+  const dots = [...(dotsWrap?.querySelectorAll('.lightbox-carousel__dot') || [])]
+
+  function goTo(next) {
+    index = (next + slides.length) % slides.length
+    track.style.transform = `translateX(-${index * 100}%)`
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index)
+    })
+    dots.forEach((dot, i) => {
+      dot.setAttribute('aria-selected', i === index ? 'true' : 'false')
+    })
+  }
+
+  function step(delta) {
+    goTo(index + delta)
+  }
+
+  root._goTo = goTo
+  root._step = step
+
+  prevBtn?.addEventListener('click', () => step(-1))
+  nextBtn?.addEventListener('click', () => step(1))
+
+  track.addEventListener(
+    'pointerdown',
+    (event) => {
+      dragging = true
+      startX = event.clientX
+      deltaX = 0
+      track.setPointerCapture(event.pointerId)
+      track.classList.add('is-dragging')
+    },
+    { passive: true },
+  )
+
+  track.addEventListener(
+    'pointermove',
+    (event) => {
+      if (!dragging) return
+      deltaX = event.clientX - startX
+      const width = root.clientWidth || 1
+      const offset = -index * 100 + (deltaX / width) * 100
+      track.style.transform = `translateX(${offset}%)`
+    },
+    { passive: true },
+  )
+
+  function endDrag(event) {
+    if (!dragging) return
+    dragging = false
+    track.classList.remove('is-dragging')
+    try {
+      track.releasePointerCapture(event.pointerId)
+    } catch {
+      /* already released */
+    }
+    const threshold = Math.min(64, (root.clientWidth || 240) * 0.18)
+    if (deltaX <= -threshold) step(1)
+    else if (deltaX >= threshold) step(-1)
+    else goTo(index)
+    deltaX = 0
+  }
+
+  track.addEventListener('pointerup', endDrag)
+  track.addEventListener('pointercancel', endDrag)
+
+  goTo(0)
 })
 
 document.querySelectorAll('[data-carousel]').forEach((root) => {
