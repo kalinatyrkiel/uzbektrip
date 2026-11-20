@@ -1432,13 +1432,15 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 2.9rem;
 }
 
 .lightbox-carousel__slide .lightbox__img {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: min(64svh, 32rem);
+  max-height: min(58svh, 28rem);
   height: auto;
   margin: 0 auto;
   object-fit: contain;
@@ -1446,6 +1448,7 @@ a {
 
 .lightbox-carousel__caption {
   margin: 0.55rem 0 0;
+  padding: 0 2.75rem;
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.3;
@@ -1461,8 +1464,9 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 0.65rem;
-  padding: 0 0.35rem;
+  padding: 0 0.35rem 2.9rem;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .lightbox-carousel__btn {
@@ -1495,7 +1499,7 @@ a {
 .lightbox-carousel__dots {
   position: absolute;
   left: 50%;
-  bottom: 0.65rem;
+  bottom: 0.35rem;
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -1504,7 +1508,7 @@ a {
   padding: 0.35rem 0.55rem;
   transform: translateX(-50%);
   pointer-events: auto;
-  background: rgba(243, 230, 210, 0.92);
+  background: rgba(243, 230, 210, 0.96);
   border: 1.5px solid var(--burgundy);
   border-radius: 999px;
 }
