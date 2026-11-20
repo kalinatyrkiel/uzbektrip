@@ -185,7 +185,9 @@ a {
 
 .hero__route {
   margin-bottom: 0.45rem;
+  max-width: 42rem;
   line-height: 1.4;
+  text-wrap: balance;
 }
 
 .hero__route-sep {
