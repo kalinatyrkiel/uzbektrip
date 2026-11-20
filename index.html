@@ -58,21 +58,9 @@
             <span class="hero__option">(bonusowo Kirgistan?)</span>
           </h1>
           <p class="hero__route reveal delay-2">
-            Wariant A: 12 dni · najpierw
-            <span class="flag" title="Kirgistan" aria-label="Kirgistan">🇰🇬</span>
-            Biszkek →
-            <span class="flag" title="Kazachstan" aria-label="Kazachstan">🇰🇿</span>
-            Ałmaty
+            A/B: 12 dni · 4 miasta · kolejność Biszkek ↔ Ałmaty
             <span class="hero__route-b"
-              >Wariant B: 12 dni · najpierw
-              <span class="flag" title="Kazachstan" aria-label="Kazachstan"
-                >🇰🇿</span
-              >
-              Ałmaty →
-              <span class="flag" title="Kirgistan" aria-label="Kirgistan"
-                >🇰🇬</span
-              >
-              Biszkek</span
+              >C: mega prosty · Taszkent · Samarkanda · Ałmaty</span
             >
           </p>
           <p class="hero__flights reveal delay-2">LOT WAW ↔ TAS</p>
@@ -110,6 +98,16 @@
                 Ałmaty →
                 <span class="flag" title="Kirgistan" aria-label="Kirgistan">🇰🇬</span>
                 Biszkek
+              </dd>
+            </div>
+            <div class="tldr__row">
+              <dt>Wariant C</dt>
+              <dd>
+                Mega prosty ·
+                <span class="flag" title="Uzbekistan" aria-label="Uzbekistan">🇺🇿</span>
+                Taszkent · Samarkanda ·
+                <span class="flag" title="Kazachstan" aria-label="Kazachstan">🇰🇿</span>
+                Ałmaty
               </dd>
             </div>
             <div class="tldr__row">
@@ -187,7 +185,7 @@
           <p class="eyebrow">Wariant wyjazdu</p>
           <h2 class="variant-bar__title">Warianty 10 lub 12 dni</h2>
           <div
-            class="variant-toggle"
+            class="variant-toggle variant-toggle--3"
             role="tablist"
             aria-label="Wariant planu wyjazdu"
           >
@@ -218,6 +216,21 @@
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
                 >Najpierw Ałmaty → Biszkek</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-variant-c"
+              aria-selected="false"
+              aria-controls="plan-variant-c"
+              data-variant="c"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">C</span>
+              <span class="variant-toggle__label"
+                >Mega prosty · bez Biszkeku</span
               >
             </button>
           </div>
@@ -255,42 +268,22 @@
             </div>
           </article>
 
-          <div data-variant-panel="a">
-            <p class="price-banner">
-              Roundtrip średnio <strong>~2270 PLN</strong>
-              <span>z próbki 30.03</span>
-            </p>
-            <p class="regional__lede">
-              Powrót LOT TAS → WAW · 30.03 · ~2:00 w nocy.
-            </p>
-            <div class="return-strip" aria-label="Przykładowa data powrotu LOT">
-              <article class="return-chip return-chip--pick">
-                <span class="return-chip__price">od 1060,39 PLN</span>
-                <span class="return-chip__date"
-                  ><time datetime="2027-03-30">wt 30.03</time></span
-                >
-                <span class="return-chip__time">TAS → WAW · ~2:00 w nocy</span>
-              </article>
-            </div>
-          </div>
-
-          <div data-variant-panel="b" hidden>
-            <p class="price-banner">
-              Roundtrip średnio <strong>~2270 PLN</strong>
-              <span>z próbki 30.03</span>
-            </p>
-            <p class="regional__lede">
-              Powrót LOT TAS → WAW · 30.03 · ~2:00 w nocy.
-            </p>
-            <div class="return-strip" aria-label="Przykładowa data powrotu LOT">
-              <article class="return-chip return-chip--pick">
-                <span class="return-chip__price">od 1060,39 PLN</span>
-                <span class="return-chip__date"
-                  ><time datetime="2027-03-30">wt 30.03</time></span
-                >
-                <span class="return-chip__time">TAS → WAW · ~2:00 w nocy</span>
-              </article>
-            </div>
+          <p class="price-banner">
+            Roundtrip średnio <strong>~2270 PLN</strong>
+            <span>z próbki 30.03</span>
+          </p>
+          <p class="regional__lede">
+            Powrót LOT TAS → WAW · 30.03 · ~2:00 w nocy. Da się też wrócić
+            <time datetime="2027-03-29">29.03</time>.
+          </p>
+          <div class="return-strip" aria-label="Przykładowa data powrotu LOT">
+            <article class="return-chip return-chip--pick">
+              <span class="return-chip__price">od 1060,39 PLN</span>
+              <span class="return-chip__date"
+                ><time datetime="2027-03-30">wt 30.03</time></span
+              >
+              <span class="return-chip__time">TAS → WAW · ~2:00 w nocy</span>
+            </article>
           </div>
         </section>
 
@@ -387,126 +380,15 @@
           </div>
         </section>
 
-        <div class="section variant-bar variant-bar--regional" id="loty-regionalne">
+        <section
+          class="section flights flights--regional"
+          id="loty-regionalne"
+        >
           <p class="eyebrow">Loty regionalne</p>
-          <div
-            class="variant-toggle"
-            role="tablist"
-            aria-label="Wariant lotów regionalnych"
-          >
-            <button
-              type="button"
-              class="variant-toggle__btn"
-              role="tab"
-              id="tab-regional-variant-a"
-              aria-selected="true"
-              aria-controls="loty-almaty"
-              data-variant="a"
-            >
-              <span class="variant-toggle__code">A</span>
-              <span class="variant-toggle__label"
-                >Najpierw Biszkek → Ałmaty</span
-              >
-            </button>
-            <button
-              type="button"
-              class="variant-toggle__btn"
-              role="tab"
-              id="tab-regional-variant-b"
-              aria-selected="false"
-              aria-controls="loty-wariant-b"
-              data-variant="b"
-              tabindex="-1"
-            >
-              <span class="variant-toggle__code">B</span>
-              <span class="variant-toggle__label"
-                >Najpierw Ałmaty → Biszkek</span
-              >
-            </button>
-          </div>
-        </div>
-
-        <section
-          class="section flights flights--regional"
-          id="loty-almaty"
-          data-variant-panel="a"
-          role="tabpanel"
-          aria-labelledby="tab-regional-variant-a"
-        >
-          <p class="eyebrow">Przykłady · wariant A</p>
-          <h2>Lot regionalny</h2>
+          <h2>Przykłady na pełną trasę</h2>
           <p class="regional__lede">
-            Przykłady: TAS↔ALA 23.03 rano / 25.03 wieczór.
+            Próbka jak w wariancie B: TAS → ALA · ALA → BSZ · BSZ → TAS.
           </p>
-          <p class="price-banner price-banner--regional">
-            Cena w 2 strony: ok. <strong>800 zł</strong>
-          </p>
-
-          <article class="flight-card flight-card--sample">
-            <span class="flight-card__badge flight-card__badge--teal"
-              >TAS → ALA · 23.03 · przykład</span
-            >
-            <div class="sample-airline">
-              <span class="airline-mark airline-mark--silkavia" aria-hidden="true"
-                >S</span
-              >
-              <span class="sample-airline__name">Silkavia / Uzbekistan Airways</span>
-            </div>
-            <div class="flight-card__route">
-              <div class="leg">
-                <span class="leg__code">TAS</span>
-                <span class="leg__time">07:55</span>
-                <span class="leg__city">Taszkent</span>
-              </div>
-              <div class="mid">
-                <span class="mid__dur">1 godz. 40 min</span>
-                <span class="mid__line" aria-hidden="true"></span>
-              </div>
-              <div class="leg leg--end">
-                <span class="leg__code">ALA</span>
-                <span class="leg__time">09:35</span>
-                <span class="leg__city">Ałmaty</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="flight-card flight-card--sample">
-            <span class="flight-card__badge">ALA → TAS · 25.03 · przykład</span>
-            <div class="sample-airline">
-              <span class="airline-mark airline-mark--qanot" aria-hidden="true"
-                >Q</span
-              >
-              <span class="sample-airline__name">Qanot Sharq</span>
-            </div>
-            <div class="flight-card__route">
-              <div class="leg">
-                <span class="leg__code">ALA</span>
-                <span class="leg__time">19:40</span>
-                <span class="leg__city">Ałmaty</span>
-              </div>
-              <div class="mid">
-                <span class="mid__dur">1 godz. 30 min</span>
-                <span class="mid__line" aria-hidden="true"></span>
-              </div>
-              <div class="leg leg--end">
-                <span class="leg__code">TAS</span>
-                <span class="leg__time">21:10</span>
-                <span class="leg__city">Taszkent</span>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section
-          class="section flights flights--regional"
-          id="loty-wariant-b"
-          data-variant-panel="b"
-          role="tabpanel"
-          aria-labelledby="tab-regional-variant-b"
-          hidden
-        >
-          <p class="eyebrow">Przykłady · wariant B</p>
-          <h2>Loty regionalne</h2>
           <p class="price-banner price-banner--regional">
             średnio <strong>600 zł</strong> za lot regionalny
           </p>
@@ -598,7 +480,7 @@
           <p class="eyebrow">Koszty i FAQ</p>
           <h2>Ile to wychodzi</h2>
           <div
-            class="variant-toggle"
+            class="variant-toggle variant-toggle--3"
             role="tablist"
             aria-label="Wariant kosztów"
           >
@@ -629,6 +511,21 @@
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
                 >Najpierw Ałmaty → Biszkek</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-cost-variant-c"
+              aria-selected="false"
+              aria-controls="cost-variant-c"
+              data-variant="c"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">C</span>
+              <span class="variant-toggle__label"
+                >Mega prosty · bez Biszkeku</span
               >
             </button>
           </div>
@@ -727,13 +624,72 @@
               </div>
             </details>
           </div>
+
+          <div data-variant-panel="c" id="cost-variant-c" hidden>
+            <details class="faq__item" open>
+              <summary>Jakie to koszty za całość?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">
+                  Wariant C · na osobę: <strong>ok. 4400–5600 zł</strong>
+                </p>
+                <ul class="faq__breakdown">
+                  <li>
+                    <span>Roundtrip WAW ↔ TAS (LOT)</span>
+                    <strong>~2200–2350 zł · średnio ~2270</strong>
+                  </li>
+                  <li>
+                    <span>Loty regionalne TAS ↔ ALA + pociąg</span>
+                    <strong>~900–1100 zł</strong>
+                  </li>
+                  <li>
+                    <span>Hotele (~11 nocy × ~120–200 zł)</span>
+                    <strong>~1300–2200 zł</strong>
+                  </li>
+                  <li>
+                    <span>Lokalnie (pociąg, metro, taxi)</span>
+                    <strong>~250–500 zł</strong>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="faq__item" open>
+              <summary>Ile to dni urlopu?</summary>
+              <div class="faq__body">
+                <p class="faq__answer">
+                  Wariant C: <strong>7 dni urlopu</strong> przy powrocie
+                  <time datetime="2027-03-30">30.03</time>
+                </p>
+                <p>
+                  Wylot <time datetime="2027-03-19">19.03</time> (pt), powrót
+                  <time datetime="2027-03-30">30.03</time>. Te same dni urlopu
+                  co w A/B.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <details class="faq__item">
+            <summary>Czy da się wrócić dzień wcześniej?</summary>
+            <div class="faq__body">
+              <p class="faq__answer">
+                Tak — LOT
+                <time datetime="2027-03-29">29.03</time> zamiast
+                <time datetime="2027-03-30">30.03</time>. Urlop wtedy o dzień
+                krótszy.
+              </p>
+            </div>
+          </details>
         </section>
 
         <section class="section plan" id="plan">
           <p class="eyebrow">Plan wyjazdu</p>
-          <h2>Warianty 10 lub 12 dni</h2>
+          <h2>
+            Warianty 10 lub 12 dni: 🇺🇿 Taszkent · 🇺🇿 Samarkanda · 🇰🇿 Ałmaty ·
+            🇰🇬 Biszkek — 2 lub 3 kraje, kolejność do ustalenia
+          </h2>
           <div
-            class="variant-toggle"
+            class="variant-toggle variant-toggle--3"
             role="tablist"
             aria-label="Wariant planu dnia"
           >
@@ -764,6 +720,21 @@
               <span class="variant-toggle__code">B</span>
               <span class="variant-toggle__label"
                 >Najpierw Ałmaty → Biszkek</span
+              >
+            </button>
+            <button
+              type="button"
+              class="variant-toggle__btn"
+              role="tab"
+              id="tab-plan-variant-c"
+              aria-selected="false"
+              aria-controls="plan-variant-c"
+              data-variant="c"
+              tabindex="-1"
+            >
+              <span class="variant-toggle__code">C</span>
+              <span class="variant-toggle__label"
+                >Mega prosty · bez Biszkeku</span
               >
             </button>
           </div>
@@ -1006,6 +977,131 @@
               </li>
             </ol>
           </div>
+
+          <div
+            class="plan__variant"
+            id="plan-variant-c"
+            role="tabpanel"
+            aria-labelledby="tab-variant-c tab-plan-variant-c"
+            data-variant-panel="c"
+            hidden
+          >
+            <ol class="plan__list">
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day">D1 · 19.03 · Taszkent</span>
+                <p>LOT ląduje w nocy. Drzemka i jesteśmy w grze.</p>
+              </li>
+              <li
+                class="plan__item plan__item--uz plan__item--photo"
+                data-lightbox="samarkanda"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-samarkanda"
+                aria-label="Pokaż zdjęcie Samarkandy"
+              >
+                <span class="plan__day">D2 · 20.03 · TAS → Samarkanda</span>
+                <p>Afrosiyob, 2h i błękitne kafelki witają.</p>
+              </li>
+              <li
+                class="plan__item plan__item--uz plan__item--photo"
+                data-lightbox="samarkanda"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-samarkanda"
+                aria-label="Pokaż zdjęcie Samarkandy"
+              >
+                <span class="plan__day">D3–D4 · 21–22.03 · Samarkanda</span>
+                <p>Registan, meczety, zero pośpiechu. Pełne dwa dni w mieście.</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day"
+                  >D5 · 23.03 · Samarkanda → TAS · pociąg</span
+                >
+                <p>
+                  Pociąg wraca do Taszkentu. Noc w TAS — jutro lot, nie dziś.
+                </p>
+              </li>
+              <li
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-almaty"
+                aria-label="Pokaż zdjęcie Ałmatów"
+              >
+                <span class="plan__day">D6 · 24.03 · TAS → Ałmaty</span>
+                <p>Lot regionalny. Hello, Ałmaty!</p>
+              </li>
+              <li
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-almaty"
+                aria-label="Pokaż zdjęcie Ałmatów"
+              >
+                <span class="plan__day">D7 · 25.03 · Ałmaty</span>
+                <p>Dzień na miasto u stóp Tian Shan. Kawa i spacery.</p>
+              </li>
+              <li
+                class="plan__item plan__item--kz plan__item--photo"
+                data-lightbox="almaty-horses"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-almaty-horses"
+                aria-label="Pokaż zdjęcie koni pod Ałmatami"
+              >
+                <span class="plan__day">D8 · 26.03 · Ałmaty · góry</span>
+                <p>Dla chętnych: po to buty trekkingowe leciały w bagażu.</p>
+                <p>Dla chętnych możliwe konie 🐴</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day">D9 · 27.03 · Ałmaty → TAS</span>
+                <p>Lot powrotny do bazy. Zostaje jeszcze chill w Taszkencie.</p>
+              </li>
+              <li
+                class="plan__item plan__item--uz plan__item--photo"
+                data-lightbox="metro"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-metro"
+                aria-label="Pokaż zdjęcie metra w Taszkencie"
+              >
+                <span class="plan__day">D10 · 28.03 · Taszkent</span>
+                <p>Metro, brutalizm, kawusia. Zero pośpiechu.</p>
+              </li>
+              <li
+                class="plan__item plan__item--uz plan__item--photo"
+                data-lightbox="navruz"
+                role="button"
+                tabindex="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox-navruz"
+                aria-label="Pokaż zdjęcie Navruz"
+              >
+                <span class="plan__day">D11 · 29.03 · Taszkent</span>
+                <p>Ostatni pełny dzień w mieście — albo LOT dzień wcześniej.</p>
+              </li>
+              <li class="plan__item plan__item--uz">
+                <span class="plan__day">D12 · 30.03 · LOT do domu</span>
+                <p>
+                  TAS → WAW ~2:00 w nocy. Rano polskiego czasu już Warszawa.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <p class="plan__footnote">
+            Kto chce, może wrócić dzień wcześniej — LOT
+            <time datetime="2027-03-29">29.03</time> zamiast
+            <time datetime="2027-03-30">30.03</time>.
+          </p>
         </section>
 
         <section class="section closing" id="palec" aria-label="Zakończenie">

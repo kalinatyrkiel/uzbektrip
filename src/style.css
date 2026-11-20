@@ -711,9 +711,10 @@ a {
 
 .return-strip {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.55rem;
   margin: 0 0 1.15rem;
+  max-width: 22rem;
 }
 
 .variant-bar {
@@ -1078,6 +1079,10 @@ a {
   box-shadow: 0 4px 0 rgba(58, 26, 29, 0.12);
 }
 
+.variant-toggle--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .variant-toggle__btn {
   display: flex;
   flex-direction: column;
@@ -1135,6 +1140,11 @@ a {
   color: var(--moss-ink);
 }
 
+.variant-toggle__btn[data-variant="c"] .variant-toggle__code {
+  background: var(--peach);
+  color: var(--burgundy-ink);
+}
+
 .variant-toggle__label {
   font-family: var(--font-heading);
   font-optical-sizing: auto;
@@ -1144,7 +1154,27 @@ a {
   overflow-wrap: anywhere;
 }
 
+.variant-toggle--3 .variant-toggle__label {
+  font-size: clamp(0.72rem, 2.8vw, 0.86rem);
+}
+
 /* Plan */
+.plan h2 {
+  text-wrap: balance;
+}
+
+.plan__footnote {
+  margin: 1.15rem 0 0;
+  padding: 0.75rem 0.85rem;
+  background: var(--note-bg);
+  border-left: 4px solid var(--peach-deep);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--burgundy-ink);
+}
+
 .plan__list {
   margin: 0;
   padding: 0;
@@ -1464,6 +1494,12 @@ body.lightbox-open {
   }
   to {
     background-position: center -48px;
+  }
+}
+
+@media (max-width: 720px) {
+  .variant-toggle--3 {
+    grid-template-columns: 1fr;
   }
 }
 
