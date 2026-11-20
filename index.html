@@ -180,15 +180,15 @@
             </li>
             <li
               class="why__item why__item--photo"
-              data-lightbox="almaty"
+              data-lightbox="almaty-bishkek"
               role="button"
               tabindex="0"
               aria-haspopup="dialog"
-              aria-controls="lightbox-almaty"
-              aria-label="Pokaż zdjęcie Ałmatów"
+              aria-controls="lightbox-almaty-bishkek"
+              aria-label="Pokaż zdjęcia Ałmatów i Biszkeku"
             >
-              <strong>Ałmaty i góry</strong>
-              Spektakularne miasto u stóp gór – dla każdego coś miłego
+              <strong>Ałmaty, Biszkek i góry</strong>
+              Spektakularne miasta u stóp gór – dla każdego coś miłego
             </li>
             <li
               class="why__item why__item--photo"
@@ -1256,6 +1256,85 @@
           width="678"
           height="452"
         />
+      </div>
+    </div>
+
+    <div
+      class="lightbox"
+      id="lightbox-almaty-bishkek"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-almaty-bishkek-title"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        data-lightbox-close
+        aria-label="Zamknij zdjęcie"
+      ></button>
+      <div class="lightbox__panel" role="document">
+        <h2 class="lightbox__title" id="lightbox-almaty-bishkek-title">
+          Ałmaty, Biszkek i góry
+        </h2>
+        <button
+          type="button"
+          class="lightbox__close"
+          data-lightbox-close
+          aria-label="Zamknij"
+        >
+          ×
+        </button>
+        <div class="lightbox-carousel" data-lightbox-carousel>
+          <div class="lightbox-carousel__viewport">
+            <ul class="lightbox-carousel__track" data-lightbox-carousel-track>
+              <li class="lightbox-carousel__slide is-active">
+                <img
+                  class="lightbox__img"
+                  src="almaty-mountains.png"
+                  alt="Ałmaty — miasto u stóp gór Tian Shan"
+                  width="678"
+                  height="452"
+                />
+                <p class="lightbox-carousel__caption">Ałmaty</p>
+              </li>
+              <li class="lightbox-carousel__slide">
+                <img
+                  class="lightbox__img"
+                  src="bishkek-panorama.png"
+                  alt="Biszkek — panorama miasta u stóp gór"
+                  width="1386"
+                  height="1736"
+                />
+                <p class="lightbox-carousel__caption">Biszkek</p>
+              </li>
+            </ul>
+          </div>
+          <div class="lightbox-carousel__controls">
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-prev
+              aria-label="Poprzednie zdjęcie"
+            >
+              ←
+            </button>
+            <div
+              class="lightbox-carousel__dots"
+              data-lightbox-carousel-dots
+              role="tablist"
+              aria-label="Slajdy Ałmaty i Biszkek"
+            ></div>
+            <button
+              type="button"
+              class="lightbox-carousel__btn"
+              data-lightbox-carousel-next
+              aria-label="Następne zdjęcie"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
