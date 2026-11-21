@@ -1,6 +1,6 @@
 # Kalina Travel — Uzbekistan × Kazachstan
 
-Memowa strona wyjazdu: Taszkent → Samarkanda → Ałmaty, LOT WAW ↔ TAS, 19–29.03.2027.
+Memowa strona wyjazdu: Taszkent → Samarkanda → Ałmaty (+ Biszkek?), LOT WAW → TAS, powrót Air Arabia z Ałmaty 29.03.
 
 ## Start
 
